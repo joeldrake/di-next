@@ -1,0 +1,68 @@
+.Contact {
+  --color-text-primary: #fff;
+  --color-background-primary: #005cef;
+  --color-interactive-primary: #fff;
+
+  min-height: 50vh;
+
+  background-color: var(--color-background-primary);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .Contact {
+    min-height: 100vh;
+  }
+}
+.Contact a {
+  color: var(--color-interactive-primary);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.Contact a:hover,
+.Contact a:active,
+.Contact a:focus {
+  outline: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.Contact hr {
+  border-color: var(--color-text-primary);
+}
+
+.Contact__email {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 350px) {
+  .Contact__email {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    word-wrap: break-word;
+  }
+}
+
+.Contact__socialMedia {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.Contact__socialMedia a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.Contact__socialMedia img {
+  display: block;
+  height: 100%;
+  width: auto;
+}

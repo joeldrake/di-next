@@ -1,3 +1,4 @@
+import Header from '@/components/presentation/Header';
 import About from '@/components/presentation/About';
 import Contact from '@/components/presentation/Contact';
 import Start from '@/components/presentation/Start';
@@ -10,6 +11,7 @@ const Index = () => {
       <Head>
         <title>Drake Innovation</title>
       </Head>
+      <Header />
       <Start />
       <About />
       <Work />

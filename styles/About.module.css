@@ -1,0 +1,8 @@
+.About {
+  min-height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  .About {
+    min-height: 100vh;
+  }
+}

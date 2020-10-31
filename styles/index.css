@@ -1,0 +1,142 @@
+:root {
+  --color-text-primary: #222;
+  --color-background-primary: #fff;
+  --color-background-secondary: #e7e3da;
+  --color-grey: #eee;
+  --color-work: #ffdd18;
+  --color-interactive-primary: #005cef;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-background-primary);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  border: 0;
+  border-bottom: 0.25rem solid var(--color-text-primary);
+}
+
+h1,
+h2,
+p {
+  margin: 1.2rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  color: var(--color-interactive-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .animateUnderline a {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .animateUnderline a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-interactive-primary);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s;
+  }
+
+  .animateUnderline a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+
+.siteWidth {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.invisibleSideScrolling {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.invisibleSideScrolling::-webkit-scrollbar {
+  display: none;
+}
+
+.fadeIn {
+  animation-name: fadeInAnimation;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.siteSidePadding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.sectionPadding {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 250px) {
+  .siteSidePadding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

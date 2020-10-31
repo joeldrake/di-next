@@ -1,0 +1,62 @@
+.Work {
+  --color-background-primary: var(--color-work);
+  --color-background-secondary: #fff;
+
+  min-height: 50vh;
+
+  background-color: var(--color-background-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .Work {
+    min-height: 100vh;
+  }
+}
+
+.Work__boxes {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Work__box {
+  position: relative;
+  z-index: 20;
+  width: 47%;
+  background-color: var(--color-background-secondary);
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: -1px 1px 0 0 var(--color-grey), -2px 2px 0 0 var(--color-grey),
+    -3px 3px 0 0 var(--color-grey), -4px 4px 0 0 var(--color-grey), -5px 5px 0 0 var(--color-grey),
+    -6px 6px 0 0 var(--color-grey), -7px 7px 0 0 var(--color-grey), -8px 8px 0 0 var(--color-grey);
+}
+
+.Work__box h3 {
+  margin: 0;
+}
+
+.Work__tags {
+  margin-top: 1.5rem;
+}
+
+.Work__tag {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  background-color: var(--color-grey);
+  padding: 0 0.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .Work__boxes {
+    margin-top: 2rem;
+  }
+
+  .Work__box {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
