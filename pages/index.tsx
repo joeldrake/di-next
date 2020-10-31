@@ -1,19 +1,19 @@
-import Container from '@/components/container';
-import Intro from '@/components/intro';
-import Layout from '@/components/layout';
+import About from '@/components/presentation/About';
+import Contact from '@/components/presentation/Contact';
+import Start from '@/components/presentation/Start';
+import Work from '@/components/presentation/Work';
 import Head from 'next/head';
 
 const Index = () => {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Drake Innovation</title>
-        </Head>
-        <Container>
-          <Intro />
-        </Container>
-      </Layout>
+      <Head>
+        <title>Drake Innovation</title>
+      </Head>
+      <Start />
+      <About />
+      <Work />
+      <Contact />
     </>
   );
 };
