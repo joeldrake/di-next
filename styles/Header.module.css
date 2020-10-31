@@ -19,6 +19,12 @@
   width: 100%;
 }
 
+.Header__logo a {
+  color: #222;
+  text-decoration: none;
+  padding: 1rem;
+}
+
 .Header__navToggle,
 .Header__navButton {
   display: none;
@@ -41,6 +47,7 @@
   color: #222;
 }
 
+.Header__logo a:before,
 .Header__nav a:before {
   background-color: #222 !important;
 }

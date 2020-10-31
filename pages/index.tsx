@@ -1,4 +1,4 @@
-import Header from '@/components/presentation/Header';
+import Header from '@/components/Header';
 import About from '@/components/presentation/About';
 import Contact from '@/components/presentation/Contact';
 import Start from '@/components/presentation/Start';

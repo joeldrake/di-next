@@ -2,9 +2,8 @@ import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
 import PostBody from '@/components/blog/PostBody';
-import Header from '@/components/blog/BlogHeader';
 import PostHeader from '@/components/blog/PostHeader';
-import LayoutBlog from '@/components/blog/BlogLayout';
+import BlogLayout from '@/components/blog/BlogLayout';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import PostTitle from '@/components/blog/PostTitle';
 import Head from 'next/head';
@@ -23,8 +22,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <LayoutBlog preview={preview}>
-      <Header />
+    <BlogLayout preview={preview}>
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
@@ -44,7 +42,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
           </article>
         </>
       )}
-    </LayoutBlog>
+    </BlogLayout>
   );
 };
 

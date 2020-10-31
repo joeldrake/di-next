@@ -2,7 +2,7 @@ import Container from '@/components/Container';
 import MoreStories from '@/components/blog/MoreStories';
 import HeroPost from '@/components/blog/HeroPost';
 import Intro from '@/components/blog/BlogIntro';
-import Layout from '@/components/blog/BlogLayout';
+import BlogLayout from '@/components/blog/BlogLayout';
 import { getAllPosts } from '@/lib/api';
 import Head from 'next/head';
 import Post from '@/types/post';
@@ -16,7 +16,7 @@ const Index = ({ allPosts }: Props) => {
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout>
+      <BlogLayout>
         <Head>
           <title>Drake Innovation</title>
         </Head>
@@ -34,7 +34,7 @@ const Index = ({ allPosts }: Props) => {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-      </Layout>
+      </BlogLayout>
     </>
   );
 };
