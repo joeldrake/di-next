@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import styles from '@/styles/Start.module.css';
+import Image from 'next/image';
 
 let onClick = (e: any) => {
   const hash = '#about';
@@ -18,6 +19,15 @@ let onClick = (e: any) => {
 const Start = () => {
   return (
     <div className={styles.Start} id="start">
+      <div className={styles.Start__image}>
+        <Image
+          src="/images/joeldrake.jpg"
+          alt="Joel Drake"
+          width={1600}
+          height={1067}
+          sizes={'50%'}
+        />
+      </div>
       <div
         className={cn(
           styles.Start__inner,

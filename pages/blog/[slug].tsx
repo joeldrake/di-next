@@ -9,6 +9,7 @@ import PostTitle from '@/components/blog/PostTitle';
 import Head from 'next/head';
 import markdownToHtml from '@/lib/markdownToHtml';
 import PostType from '@/types/post';
+import PreviewBanner from '@/components/PreviewBanner';
 
 type Props = {
   post: PostType;
@@ -16,17 +17,18 @@ type Props = {
   preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const BlogPost = ({ post, morePosts, preview }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <BlogLayout preview={preview}>
+    <BlogLayout>
+      {preview && <PreviewBanner />}
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
-        <>
+        <div className={'BlogPost'}>
           <article className="mb-32">
             <Head>
               <title>{post.title} | Drake Innovation</title>
@@ -40,13 +42,13 @@ const Post = ({ post, morePosts, preview }: Props) => {
             />
             <PostBody content={post.content} />
           </article>
-        </>
+        </div>
       )}
     </BlogLayout>
   );
 };
 
-export default Post;
+export default BlogPost;
 
 type Params = {
   params: {

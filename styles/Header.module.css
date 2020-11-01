@@ -5,6 +5,7 @@
   top: 0;
   width: 100%;
   z-index: 50;
+  pointer-events: none;
 }
 
 .Header__inner {
@@ -12,7 +13,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.Header__logo,
+.Header__navToggle,
+.Header__navButton,
+.Header__nav {
+  pointer-events: all;
 }
 
 .Header__logo {
@@ -23,6 +31,10 @@
   color: #222;
   text-decoration: none;
   padding: 1rem;
+}
+
+.Header__icon {
+  display: none;
 }
 
 .Header__navToggle,
@@ -55,7 +67,6 @@
 @media screen and (max-width: 768px) {
   .Header--fixed {
     position: fixed;
-    pointer-events: none;
   }
 
   .Header--fixed .Header__inner {
@@ -65,10 +76,6 @@
 
   .Header--fixed .Header__logo {
     display: none;
-  }
-
-  .Header--fixed .Header__navToggle {
-    pointer-events: all;
   }
 
   .Header__navToggle {
@@ -81,9 +88,9 @@
     right: 1rem;
     display: block;
     width: calc(100% - 2rem);
+    max-width: 300px;
     background-color: #fff;
     opacity: 0;
-    pointer-events: none;
     z-index: -1;
     transform: scale(0);
     transform-origin: 95% top;
@@ -113,9 +120,12 @@
     text-decoration: none;
   }
 
+  .Header__icon {
+    display: inline;
+  }
+
   .Header__nav a:hover,
-  .Header__nav a:active,
-  .Header__nav a:focus {
+  .Header__nav a:active {
     outline: 0;
     background: rgba(0, 0, 0, 0.1);
   }
@@ -135,8 +145,7 @@
   }
 
   .Header__navButton:hover,
-  .Header__navButton:active,
-  .Header__navButton:focus {
+  .Header__navButton:active {
     outline: 0;
   }
 
@@ -148,14 +157,12 @@
 
   .Header__navButton:checked ~ .Header__nav {
     transform: scale(1);
-    pointer-events: auto;
     opacity: 1;
     z-index: 1;
   }
 
   .Header__navButton:checked ~ .Header__navToggle {
     transform: scale(1);
-    pointer-events: auto;
     opacity: 1;
     z-index: 1;
   }
@@ -169,7 +176,6 @@
 
   .Header__nav:focus-within {
     transform: scale(1);
-    pointer-events: auto;
     opacity: 1;
     z-index: 1;
   }
@@ -186,5 +192,34 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .Header__inner {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .Header__inner {
+    padding: 0;
+    font-size: 5.8vw;
+  }
+
+  .Header__nav {
+    font-size: 0.75rem;
+    top: 4rem;
+    right: 0.5rem;
+  }
+
+  .Header__nav:before {
+    right: 0.5rem;
+  }
+
+  .Header__logo a {
+    padding: 0.5rem;
+    width: 25vw;
+    display: block;
   }
 }

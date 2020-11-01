@@ -91,16 +91,25 @@ const Header = () => {
           aria-haspopup="true"
         >
           <Link href="/#about">
-            <a onClick={onClickNavLink}>About 🐲</a>
+            <a onClick={onClickNavLink}>
+              About
+              <div className={styles.Header__icon}>&nbsp;🐲</div>
+            </a>
           </Link>
           <Link href="/#work">
-            <a onClick={onClickNavLink}>Work 🛠</a>
+            <a onClick={onClickNavLink}>
+              Work<span className={styles.Header__icon}>&nbsp;🛠</span>
+            </a>
           </Link>
           <Link href="/#contact">
-            <a onClick={onClickNavLink}>Contact 📨</a>
+            <a onClick={onClickNavLink}>
+              Contact<span className={styles.Header__icon}>&nbsp;📨</span>
+            </a>
           </Link>
           <Link href="/blog">
-            <a onClick={onClickNavLink}>Blog 📝</a>
+            <a onClick={onClickNavLink}>
+              Blog<span className={styles.Header__icon}>&nbsp;📝</span>
+            </a>
           </Link>
         </nav>
       </div>
