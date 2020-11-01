@@ -4,6 +4,8 @@ import HeroPost from '@/components/blog/HeroPost';
 import { getAllPosts } from '@/lib/api';
 import Head from 'next/head';
 import Post from '@/types/post';
+import Header from '@/components/Header';
+import Meta from '@/components/Meta';
 
 type Props = {
   allPosts: Post[];
@@ -17,6 +19,9 @@ const Index = ({ allPosts }: Props) => {
       <Head>
         <title>Drake Innovation</title>
       </Head>
+
+      <Meta />
+      <Header />
 
       {heroPost && (
         <HeroPost

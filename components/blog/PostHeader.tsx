@@ -14,14 +14,16 @@ type Props = {
 const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <div className={'PostHeader'}>
-      <PostTitle>{title}</PostTitle>
+      <div className={'siteWidth siteSidePadding'}>
+        <PostTitle>{title}</PostTitle>
 
-      <Avatar name={author.name} picture={author.picture} />
+        <Avatar name={author.name} picture={author.picture} />
 
-      <CoverImage title={title} src={coverImage} />
+        <CoverImage title={title} src={coverImage} width={2000} height={1000} />
 
-      <div className="PostHeader__date">
-        <DateFormatter dateString={date} />
+        <div className="PostHeader__date">
+          <DateFormatter dateString={date} />
+        </div>
       </div>
     </div>
   );

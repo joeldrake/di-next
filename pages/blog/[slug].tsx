@@ -27,12 +27,12 @@ const BlogPost = ({ post, morePosts, preview }: Props) => {
     <>
       <Meta />
       <Header />
+      {preview && <PreviewBanner />}
       <div className={'BlogPost'}>
-        {preview && <PreviewBanner />}
         {router.isFallback ? (
           <div className={'BlogPost__loading'}>Loading…</div>
         ) : (
-          <article className="mb-32">
+          <article>
             <Head>
               <title>{post.title} | Drake Innovation</title>
               <meta property="og:image" content={post.ogImage.url} />

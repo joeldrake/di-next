@@ -16,22 +16,20 @@ type Props = {
 const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
   return (
     <section className={'HeroPost'}>
-      <div className="siteWidth">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+      <div className="siteWidth siteSidePadding">
+        <CoverImage title={title} src={coverImage} slug={slug} width={2000} height={1000} />
 
         <h3 className="HeroPost__headline">
           <Link as={`/blog/${slug}`} href="/blog/[slug]">
-            <a className="hover:underline">{title}</a>
+            <a>{title}</a>
           </Link>
         </h3>
         <div className="HeroPost__date">
           <DateFormatter dateString={date} />
         </div>
 
-        <div className="HeroPost__excerpt">
-          <p>{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
+        <p className="HeroPost__excerpt">{excerpt}</p>
+        <Avatar name={author.name} picture={author.picture} />
       </div>
     </section>
   );
