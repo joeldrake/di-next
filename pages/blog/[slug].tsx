@@ -3,13 +3,14 @@ import ErrorPage from 'next/error';
 
 import PostBody from '@/components/blog/PostBody';
 import PostHeader from '@/components/blog/PostHeader';
-import BlogLayout from '@/components/blog/BlogLayout';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import PostTitle from '@/components/blog/PostTitle';
 import Head from 'next/head';
 import markdownToHtml from '@/lib/markdownToHtml';
 import PostType from '@/types/post';
 import PreviewBanner from '@/components/PreviewBanner';
+import Meta from '@/components/Meta';
+import Header from '@/components/Header';
 
 type Props = {
   post: PostType;
@@ -23,12 +24,14 @@ const BlogPost = ({ post, morePosts, preview }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <BlogLayout>
-      {preview && <PreviewBanner />}
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <div className={'BlogPost'}>
+    <>
+      <Meta />
+      <Header />
+      <div className={'BlogPost'}>
+        {preview && <PreviewBanner />}
+        {router.isFallback ? (
+          <div className={'BlogPost__loading'}>Loading…</div>
+        ) : (
           <article className="mb-32">
             <Head>
               <title>{post.title} | Drake Innovation</title>
@@ -42,9 +45,9 @@ const BlogPost = ({ post, morePosts, preview }: Props) => {
             />
             <PostBody content={post.content} />
           </article>
-        </div>
-      )}
-    </BlogLayout>
+        )}
+      </div>
+    </>
   );
 };
 
