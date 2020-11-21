@@ -2,7 +2,7 @@ import cn from 'classnames';
 import styles from '@/styles/Start.module.css';
 import Image from 'next/image';
 
-let onClick = (e: any) => {
+const onClick = (e: any) => {
   const hash = '#about';
   const target = document.getElementById(hash.substring(1));
 
@@ -23,8 +23,8 @@ const Start = () => {
         <Image
           src="/images/joeldrake.jpg"
           alt="Joel Drake"
-          width={1600}
-          height={1067}
+          width={'1600'}
+          height={'1067'}
           sizes={'50%'}
         />
       </div>

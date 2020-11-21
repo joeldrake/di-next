@@ -7,9 +7,9 @@ import { createRef } from 'react';
 const Header = () => {
   const router: any = useRouter();
   const navToggle: any = createRef();
-  let addedEventListeners: Boolean = false;
+  let addedEventListeners = false;
 
-  let onClickNavLink = (e: any) => {
+  const onClickNavLink = (e: any) => {
     console.log('HEY', e.target.hash);
     if (addedEventListeners) {
       navToggle.checked = false;
@@ -30,7 +30,7 @@ const Header = () => {
     });
   };
 
-  let navToggleToggle = () => {
+  const navToggleToggle = () => {
     if (navToggle.checked) {
       addEventListeners();
     } else {
@@ -53,7 +53,7 @@ const Header = () => {
   const handleClick = async (e: any) => {
     const target = e.target;
 
-    var isHeader__nav = target.closest('#Header__nav');
+    const isHeader__nav = target.closest('#Header__nav');
 
     console.log(target, isHeader__nav);
     if (!isHeader__nav) {
@@ -85,30 +85,49 @@ const Header = () => {
           <img src="/images/close.svg" className={styles.Header__navClose} alt="Close navigation" />
         </label>
 
-        <nav
-          className={cn(styles.Header__nav, 'animateUnderline')}
-          id="Header__nav"
-          aria-haspopup="true"
-        >
+        <nav className={cn(styles.Header__nav, 'animateUnderline')} id="Header__nav">
           <Link href="/#about">
             <a onClick={onClickNavLink}>
               About
-              <div className={styles.Header__icon}>&nbsp;🐲</div>
+              <div className={styles.Header__icon}>
+                &nbsp;
+                <span role="img" aria-label="dragon">
+                  🐲
+                </span>
+              </div>
             </a>
           </Link>
           <Link href="/#work">
             <a onClick={onClickNavLink}>
-              Work<span className={styles.Header__icon}>&nbsp;🛠</span>
+              Work
+              <span className={styles.Header__icon}>
+                &nbsp;
+                <span role="img" aria-label="work">
+                  🛠
+                </span>
+              </span>
             </a>
           </Link>
           <Link href="/#contact">
             <a onClick={onClickNavLink}>
-              Contact<span className={styles.Header__icon}>&nbsp;📨</span>
+              Contact
+              <span className={styles.Header__icon}>
+                &nbsp;
+                <span role="img" aria-label="contact">
+                  📨
+                </span>
+              </span>
             </a>
           </Link>
           <Link href="/blog">
             <a onClick={onClickNavLink}>
-              Blog<span className={styles.Header__icon}>&nbsp;📝</span>
+              Blog
+              <span className={styles.Header__icon}>
+                &nbsp;{' '}
+                <span role="img" aria-label="blog">
+                  📝
+                </span>
+              </span>
             </a>
           </Link>
         </nav>

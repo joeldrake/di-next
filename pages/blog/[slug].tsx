@@ -1,24 +1,24 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
-import PostBody from '@/components/blog/PostBody';
-import PostHeader from '@/components/blog/PostHeader';
+import markdownStyles from '@/styles/markdown.module.css';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
-import PostTitle from '@/components/blog/PostTitle';
 import Head from 'next/head';
 import markdownToHtml from '@/lib/markdownToHtml';
 import PostType from '@/types/post';
 import PreviewBanner from '@/components/PreviewBanner';
 import Meta from '@/components/Meta';
 import Header from '@/components/Header';
+import Avatar from '@/components/blog/Avatar';
+import DateFormatter from '@/components/DateFormatter';
+import CoverImage from '@/components/blog/CoverImage';
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
   preview?: boolean;
 };
 
-const BlogPost = ({ post, morePosts, preview }: Props) => {
+const BlogPost = ({ post, preview }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -37,13 +37,23 @@ const BlogPost = ({ post, morePosts, preview }: Props) => {
               <title>{post.title} | Drake Innovation</title>
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-            />
-            <PostBody content={post.content} />
+
+            <CoverImage title={post.title} src={post.coverImage} width={'2000'} height={'1000'} />
+
+            <div className={'siteWidth siteSidePadding'}>
+              <h1>{post.title}</h1>
+
+              <Avatar name={post.author.name} picture={post.author.picture} />
+
+              <div className="PostHeader__date">
+                <DateFormatter dateString={post.date} />
+              </div>
+
+              <div
+                className={markdownStyles['markdown']}
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </div>
           </article>
         )}
       </div>
