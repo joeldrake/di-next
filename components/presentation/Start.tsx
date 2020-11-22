@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import styles from '@/styles/Start.module.css';
-import Image from 'next/image';
+import CoverImage from '@/components/blog/CoverImage';
 
 const onClick = (e: any) => {
   const hash = '#about';
@@ -19,15 +19,13 @@ const onClick = (e: any) => {
 const Start = () => {
   return (
     <div className={styles.Start} id="start">
-      <div className={styles.Start__image}>
-        <Image
-          src="/images/joeldrake.jpg"
-          alt="Joel Drake"
-          width={'1600'}
-          height={'1067'}
-          sizes={'50%'}
-        />
-      </div>
+      <CoverImage
+        title={'Joel Drake'}
+        src={'/images/joeldrake.jpg'}
+        width={'1600'}
+        height={'1067'}
+      />
+
       <div
         className={cn(
           styles.Start__inner,

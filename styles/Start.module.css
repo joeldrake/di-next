@@ -2,12 +2,6 @@
   position: relative;
 }
 
-.Start__image {
-  max-width: 960px;
-  padding: 2rem;
-  margin: 0 auto;
-}
-
 .Start__inner {
   position: absolute;
   top: 0;
@@ -52,9 +46,6 @@
 }
 
 @media screen and (max-width: 832px) {
-  .Start__image {
-    padding: 1rem;
-  }
   .Start__continueLink {
     width: 30vw;
   }
@@ -72,9 +63,6 @@
 }
 
 @media screen and (max-width: 250px) {
-  .Start__image {
-    padding: 0;
-  }
   .Start__inner {
     padding-top: 15vw;
   }

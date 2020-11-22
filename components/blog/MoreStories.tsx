@@ -7,10 +7,8 @@ type Props = {
 
 const MoreStories = ({ posts }: Props) => {
   return (
-    <section className={'MoreStories'}>
+    <section className={'MoreStories'} id="moreStories">
       <div className="siteWidth siteSidePadding">
-        <h2 className={'MoreStories__headline'}>More Stories</h2>
-
         {posts.map((post) => (
           <PostPreview
             key={post.slug}

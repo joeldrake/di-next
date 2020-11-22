@@ -1,15 +1,17 @@
+import styles from '@/styles/Avatar.module.css';
+
 type Props = {
-  name: string
-  picture: string
-}
+  name: string;
+  picture: string;
+};
 
 const Avatar = ({ name, picture }: Props) => {
   return (
-    <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
-      <div className="text-xl font-bold">{name}</div>
-    </div>
-  )
-}
+    <span className={styles.Avatar}>
+      <img src={picture} className={styles.Avatar__image} alt={name} />
+      <span className={styles.Avatar__name}>{name}</span>
+    </span>
+  );
+};
 
-export default Avatar
+export default Avatar;

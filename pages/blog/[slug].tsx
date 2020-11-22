@@ -1,13 +1,11 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
-import markdownStyles from '@/styles/markdown.module.css';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import Head from 'next/head';
 import markdownToHtml from '@/lib/markdownToHtml';
 import PostType from '@/types/post';
 import PreviewBanner from '@/components/PreviewBanner';
-import Meta from '@/components/Meta';
 import Header from '@/components/Header';
 import Avatar from '@/components/blog/Avatar';
 import DateFormatter from '@/components/DateFormatter';
@@ -25,7 +23,6 @@ const BlogPost = ({ post, preview }: Props) => {
   }
   return (
     <>
-      <Meta />
       <Header />
       {preview && <PreviewBanner />}
       <div className={'BlogPost'}>
@@ -34,8 +31,11 @@ const BlogPost = ({ post, preview }: Props) => {
         ) : (
           <article>
             <Head>
-              <title>{post.title} | Drake Innovation</title>
+              <title>{post.title} || Drake Innovation</title>
               <meta property="og:image" content={post.coverImage} />
+              <link rel="shortcut icon" href="/images/dragon.png" />
+              <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+              <meta name="description" content={post.excerpt} />
             </Head>
 
             <CoverImage title={post.title} src={post.coverImage} width={'2000'} height={'1000'} />
@@ -49,10 +49,7 @@ const BlogPost = ({ post, preview }: Props) => {
                 <DateFormatter dateString={post.date} />
               </div>
 
-              <div
-                className={markdownStyles['markdown']}
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+              <div className="Post__markdown" dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
           </article>
         )}
@@ -73,6 +70,7 @@ export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
+    'excerpt',
     'slug',
     'author',
     'content',

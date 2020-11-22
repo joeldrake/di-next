@@ -1,0 +1,43 @@
+.HeroPost {
+  position: relative;
+}
+
+.HeroPost__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroPost__link {
+  color: #222222;
+  text-decoration: none;
+
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.HeroPost__headline {
+  display: flex;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 832px) {
+  .HeroPost__headline {
+    font-size: 5.8vw;
+    margin-bottom: 4vw;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .HeroPost__inner {
+    padding-top: 15vw;
+  }
+}

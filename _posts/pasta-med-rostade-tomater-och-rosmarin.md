@@ -2,6 +2,9 @@
 title: 'Pasta med rostade tomater och rosmarin'
 excerpt: 'Väldigt enkel rätt att laga. Blir vegansk om man väljer pasta utan ägg (vilket är all vanlig pasta).'
 coverImage: '/assets/blog/pasta_ugnsrostade_korsbarstomater.jpg'
+author:
+  name: 'Joel Drake'
+  picture: '/images/joel_squared_small.jpg'
 date: '2020-11-21'
 ---
 

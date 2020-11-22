@@ -10,6 +10,9 @@ const Index = () => {
     <div className={'Main'}>
       <Head>
         <title>Drake Innovation</title>
+
+        <meta name="description" content="Drake Innovation" />
+        <meta property="og:image" content={'/images/joeldrake.jpg'} />
       </Head>
       <Header />
       <Start />
