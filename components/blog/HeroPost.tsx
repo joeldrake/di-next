@@ -17,7 +17,7 @@ const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => 
   return (
     <section className={'HeroPost'}>
       <div className="siteWidth siteSidePadding">
-        <CoverImage title={title} src={coverImage} slug={slug} width={2000} height={1000} />
+        <CoverImage title={title} src={coverImage} slug={slug} width={'2000'} height={'1000'} />
 
         <h3 className="HeroPost__headline">
           <Link as={`/blog/${slug}`} href="/blog/[slug]">
@@ -29,7 +29,7 @@ const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => 
         </div>
 
         <p className="HeroPost__excerpt">{excerpt}</p>
-        <Avatar name={author.name} picture={author.picture} />
+        {author && <Avatar name={author.name} picture={author.picture} />}
       </div>
     </section>
   );

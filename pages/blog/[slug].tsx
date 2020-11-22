@@ -35,7 +35,7 @@ const BlogPost = ({ post, preview }: Props) => {
           <article>
             <Head>
               <title>{post.title} | Drake Innovation</title>
-              <meta property="og:image" content={post.ogImage.url} />
+              <meta property="og:image" content={post.coverImage} />
             </Head>
 
             <CoverImage title={post.title} src={post.coverImage} width={'2000'} height={'1000'} />
@@ -43,7 +43,7 @@ const BlogPost = ({ post, preview }: Props) => {
             <div className={'siteWidth siteSidePadding'}>
               <h1>{post.title}</h1>
 
-              <Avatar name={post.author.name} picture={post.author.picture} />
+              {post.author && <Avatar name={post.author.name} picture={post.author.picture} />}
 
               <div className="PostHeader__date">
                 <DateFormatter dateString={post.date} />
