@@ -1,0 +1,22 @@
+.BlogStart__top {
+  min-height: 25rem;
+  padding: 3.5rem 0 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BlogStart__headline {
+  font-size: 5rem;
+  line-height: 4.2rem;
+  font-family: Times, 'Times New Roman', Serif;
+}
+
+@media screen and (max-width: 450px) {
+  .BlogStart__top {
+    min-height: 60vw;
+  }
+  .BlogStart__headline {
+    font-size: 15vw;
+  }
+}

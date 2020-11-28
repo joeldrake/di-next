@@ -17,7 +17,7 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) 
   return (
     <div className={'PostPreview'}>
       <div className="siteWidth">
-        <CoverImage slug={slug} title={title} src={coverImage} width={2000} height={1000} />
+        <CoverImage slug={slug} title={title} src={coverImage} width={'2000'} height={'1000'} />
 
         <h3 className="PostPreview__headline">
           <Link as={`/blog/${slug}`} href="/blog/[slug]">

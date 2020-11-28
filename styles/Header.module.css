@@ -218,7 +218,7 @@
   }
 
   .Header__logo a {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     width: 25vw;
     display: block;
   }

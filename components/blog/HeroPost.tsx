@@ -1,10 +1,10 @@
 import Avatar from '@/components/blog/Avatar';
 import DateFormatter from '@/components/DateFormatter';
-import CoverImage from '@/components/blog/CoverImage';
 import styles from '@/styles/HeroPost.module.css';
 import Link from 'next/link';
 import Author from '@/types/author';
 import cn from 'classnames';
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -17,30 +17,26 @@ type Props = {
 
 const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
   return (
-    <section className={styles.HeroPost}>
-      <CoverImage title={title} src={coverImage} slug={slug} width={'2000'} height={'1000'} />
+    <section className={cn(styles.HeroPost, 'siteSidePadding', 'fadeIn', 'siteWidth')}>
+      <Link as={`/blog/${slug}`} href="/blog/[slug]">
+        <a className={styles.HeroPost__link}>
+          <Image
+            className={styles.HeroPost__image}
+            src={coverImage}
+            alt={title}
+            width={960}
+            height={480}
+            sizes={'50%'}
+          />
 
-      <div
-        className={cn(
-          styles.HeroPost__inner,
-          'siteSidePadding',
-          'fadeIn',
-          'siteWidth',
-          'invisibleSideScrolling'
-        )}
-      >
-        <Link as={`/blog/${slug}`} href="/blog/[slug]">
-          <a className={styles.HeroPost__link}>
-            <h1 className={styles.HeroPost__headline}>{title}</h1>
-            <p className={styles.HeroPost__excerpt}>{excerpt}</p>
+          <h2 className={styles.HeroPost__headline}>{title}</h2>
 
-            <div className="HeroPost__date">
-              {author && <Avatar name={author.name} picture={author.picture} />}{' '}
-              <DateFormatter dateString={date} />
-            </div>
-          </a>
-        </Link>
-      </div>
+          <div className="HeroPost__date">
+            {author && <Avatar name={author.name} picture={author.picture} />}{' '}
+            <DateFormatter dateString={date} />
+          </div>
+        </a>
+      </Link>
     </section>
   );
 };
