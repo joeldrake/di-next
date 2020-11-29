@@ -10,6 +10,7 @@ import Header from '@/components/Header';
 import Avatar from '@/components/blog/Avatar';
 import DateFormatter from '@/components/DateFormatter';
 import CoverImage from '@/components/blog/CoverImage';
+import styles from '@/styles/BlogPost.module.css';
 
 type Props = {
   post: PostType;
@@ -24,32 +25,33 @@ const BlogPost = ({ post, preview }: Props) => {
   return (
     <>
       <Header />
+      <Head>
+        <title>{post.title} || Drake Innovation</title>
+        <meta property="og:image" content={post.coverImage} />
+        <link rel="shortcut icon" href="/images/dragon.png" />
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <meta name="description" content={post.excerpt} />
+      </Head>
       {preview && <PreviewBanner />}
-      <div className={'BlogPost'}>
+      <div className={styles.BlogPost}>
         {router.isFallback ? (
-          <div className={'BlogPost__loading'}>Loading…</div>
+          <div className={styles.BlogPost__loading}>Loading…</div>
         ) : (
           <article>
-            <Head>
-              <title>{post.title} || Drake Innovation</title>
-              <meta property="og:image" content={post.coverImage} />
-              <link rel="shortcut icon" href="/images/dragon.png" />
-              <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-              <meta name="description" content={post.excerpt} />
-            </Head>
-
             <CoverImage title={post.title} src={post.coverImage} width={'2000'} height={'1000'} />
 
             <div className={'siteWidth siteSidePadding'}>
-              <h1>{post.title}</h1>
+              <h1 className={styles.BlogPost__title}>{post.title}</h1>
 
-              {post.author && <Avatar name={post.author.name} picture={post.author.picture} />}
-
-              <div className="PostHeader__date">
+              <p className={styles.BlogPost__subtitle}>
                 <DateFormatter dateString={post.date} />
-              </div>
+                {post.author && <span>, {post.author}</span>}
+              </p>
 
-              <div className="Post__markdown" dangerouslySetInnerHTML={{ __html: post.content }} />
+              <div
+                className={styles.BlogPost__markdown}
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
             </div>
           </article>
         )}
@@ -76,14 +78,18 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
+    'tags',
+    'lang',
   ]);
   const content = await markdownToHtml(post.content || '');
+  const tags = post.tags ? post.tags.split(',') : null;
 
   return {
     props: {
       post: {
         ...post,
         content,
+        tags,
       },
     },
   };

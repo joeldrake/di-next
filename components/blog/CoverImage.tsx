@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/styles/CoverImage.module.css';
 
@@ -7,20 +6,12 @@ type Props = {
   src: string;
   width: string;
   height: string;
-  slug?: string;
 };
 
-const CoverImage = ({ title, src, slug, width, height }: Props) => {
-  const image = <Image src={src} alt={title} width={width} height={height} sizes={'50%'} />;
+const CoverImage = ({ title, src, width, height }: Props) => {
   return (
     <div className={styles.CoverImage}>
-      {slug ? (
-        <Link as={`/blog/${slug}`} href="/blog/[slug]">
-          <a aria-label={title}>{image}</a>
-        </Link>
-      ) : (
-        image
-      )}
+      <Image src={src} alt={title} width={width} height={height} sizes={'50%'} />
     </div>
   );
 };

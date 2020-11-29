@@ -1,34 +1,38 @@
-import Avatar from '@/components/blog/Avatar';
 import DateFormatter from '@/components/DateFormatter';
-import CoverImage from '@/components/blog/CoverImage';
+import styles from '@/styles/PostPreview.module.css';
 import Link from 'next/link';
-import Author from '@/types/author';
+import Image from 'next/image';
 
 type Props = {
   title: string;
   coverImage: string;
   date: string;
-  excerpt: string;
-  author: Author;
   slug: string;
+  heroPost?: boolean;
 };
 
-const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
+const PostPreview = ({ title, coverImage, date, slug, heroPost }: Props) => {
   return (
-    <div className={'PostPreview'}>
-      <div className="siteWidth">
-        <CoverImage slug={slug} title={title} src={coverImage} width={'2000'} height={'1000'} />
-
-        <h3 className="PostPreview__headline">
-          <Link as={`/blog/${slug}`} href="/blog/[slug]">
-            <a>{title}</a>
-          </Link>
-        </h3>
-        <div className="PostPreview__date">
-          <DateFormatter dateString={date} />
-        </div>
-        <p className="PostPreview__excerpt">{excerpt}</p>
-        <Avatar name={author.name} picture={author.picture} />
+    <div className={styles.PostPreview}>
+      <Link as={`/blog/${slug}`} href="/blog/[slug]">
+        <a className={styles.PostPreview__link}>
+          <Image
+            className={styles.PostPreview__image}
+            src={coverImage}
+            alt={title}
+            width={960}
+            height={480}
+            sizes={'50%'}
+          />
+          {heroPost ? (
+            <h2 className={styles.PostPreview__headline}>{title}</h2>
+          ) : (
+            <h3 className={styles.PostPreview__headline}>{title}</h3>
+          )}
+        </a>
+      </Link>
+      <div className={styles.PostPreview__date}>
+        <DateFormatter dateString={date} />
       </div>
     </div>
   );

@@ -1,6 +1,14 @@
+.BlogStart {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 250px) {
+  .BlogStart {
+    padding-top: 4rem;
+  }
+}
 .BlogStart__top {
-  min-height: 25rem;
-  padding: 3.5rem 0 1.5rem 0;
+  min-height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,9 +20,22 @@
   font-family: Times, 'Times New Roman', Serif;
 }
 
+.BlogStart__morePosts {
+  display: grid;
+  padding: 2rem 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .BlogStart__morePosts {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .BlogStart__top {
-    min-height: 60vw;
+    min-height: 55vw;
   }
   .BlogStart__headline {
     font-size: 15vw;

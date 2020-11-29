@@ -1,0 +1,33 @@
+.BlogPost {
+  padding-bottom: 3rem;
+}
+
+.BlogPost__title {
+  margin-top: 0;
+}
+.BlogPost__subtitle {
+  font-style: italic;
+}
+
+.BlogPost__markdown blockquote {
+  border-left: 5px solid var(--site-success);
+  background-color: var(--site-success-lighter);
+  margin: 0;
+  padding: 0.1rem 1rem;
+}
+
+.BlogPost__markdown pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.BlogPost__markdown pre::-webkit-scrollbar {
+  display: none;
+}
+
+.BlogPost__markdown code[class='language-recipe'] {
+  border-left: 5px solid var(--site-success);
+  background-color: var(--site-success-lighter);
+  margin: 0;
+  padding: 0.1rem 1rem;
+}

@@ -28,15 +28,15 @@ module.exports = {
         'plugin:prettier/recommended', // Prettier recommended rules
       ],
       rules: {
-        'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Includes .prettierrc.js rules
+        'prettier/prettier': ['warn', {}, { usePrettierrc: true }], // Includes .prettierrc.js rules
         'react/prop-types': 'off', // We will use TypeScript's types for component props instead
         'react/react-in-jsx-scope': 'off', // No need to import React when using Next.js
         'jsx-a11y/anchor-is-valid': 'off', // This rule is not compatible with Next.js's <Link /> components
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         '@typescript-eslint/no-unused-vars': ['error'], // Why would you want unused vars?
-        '@typescript-eslint/explicit-function-return-type': "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
       },
     },

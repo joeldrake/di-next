@@ -1,11 +1,4 @@
-:root {
-  --color-text-primary: #222;
-  --color-background-primary: #fff;
-  --color-background-secondary: #e7e3da;
-  --color-grey: #eee;
-  --color-work: #ffdd18;
-  --color-interactive-primary: #005cef;
-}
+@import './colors.css';
 
 html,
 body {

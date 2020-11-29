@@ -2,29 +2,29 @@
 title: 'Pasta med rostade tomater och rosmarin'
 excerpt: 'Väldigt enkel rätt att laga. Blir vegansk om man väljer pasta utan ägg (vilket är all vanlig pasta).'
 coverImage: '/assets/blog/pasta_ugnsrostade_korsbarstomater.jpg'
-author:
-  name: 'Joel Drake'
-  picture: '/images/joel_squared_small.jpg'
+author: 'Joel Drake'
 date: '2020-11-21'
+tags: recipe
+lang: sv
 ---
 
 Väldigt enkel rätt att laga. Blir vegansk om man väljer pasta utan ägg (vilket är all vanlig pasta).
 
 ### Ingredienser
 
-```
-400 g	Körsbärstomater
-1 burk	Stora vita bönor, kokta
-2 st	Vitlöksklyftor
-2 msk	Olivolja
-2 msk	Balsamvinäger
-1 tsk	Salt
-1 krm	Peppar
-300 g	Pasta
-
-Rosmarin färsk
-Basilika färsk
-```
+> ```
+> 400 g	Körsbärstomater
+> 1 burk	Stora vita bönor, kokta
+> 2 st	Vitlöksklyftor
+> 2 msk	Olivolja
+> 2 msk	Balsamvinäger
+> 1 tsk	Salt
+> 1 krm	Peppar
+> 300 g	Pasta
+>
+> Rosmarin färsk
+> Basilika färsk
+> ```
 
 ### Steg
 
@@ -36,4 +36,14 @@ Basilika färsk
 
 4. Efter ungefär 20 minuter i ugnen är tomaterna färdiga. Blanda alltsammans med pastan, och servera med lite mer olja, salt, peppar och färs basilika.
 
-`Mera vego`
+<br>
+
+_Recept från Mera Vego_
+
+```
+
+```
+
+```
+
+```

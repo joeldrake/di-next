@@ -1,0 +1,14 @@
+.PostPreview__link {
+  color: #222222;
+  text-decoration: none;
+}
+
+.PostPreview__image {
+  margin-bottom: 1rem;
+}
+
+.PostPreview__headline {
+  line-height: 1.2;
+
+  margin: 1rem 0;
+}
