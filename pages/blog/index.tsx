@@ -31,7 +31,7 @@ const Index = ({ allPosts }: Props) => {
           <div className={styles.BlogStart__heroPost}>
             <PostPreview
               title={heroPost.title}
-              coverImage={heroPost.coverImage}
+              image={heroPost.image}
               date={heroPost.date}
               slug={heroPost.slug}
               heroPost
@@ -44,7 +44,7 @@ const Index = ({ allPosts }: Props) => {
               <PostPreview
                 key={post.slug}
                 title={post.title}
-                coverImage={post.coverImage}
+                image={post.image}
                 date={post.date}
                 slug={post.slug}
               />
@@ -60,7 +60,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'coverImage']);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'image']);
 
   return {
     props: { allPosts },

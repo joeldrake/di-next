@@ -2,12 +2,13 @@ type PostType = {
   slug: string;
   title: string;
   date: string;
-  coverImage: string;
+  image: {
+    url: string;
+    width: number;
+    height: number;
+  };
   author: string;
   excerpt: string;
-  ogImage: {
-    url: string;
-  };
   content: string;
   tags?: [string];
   lang?: string;

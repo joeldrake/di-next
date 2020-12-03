@@ -7,7 +7,6 @@ import markdownToHtml from '@/lib/markdownToHtml';
 import PostType from '@/types/post';
 import PreviewBanner from '@/components/PreviewBanner';
 import Header from '@/components/Header';
-import Avatar from '@/components/blog/Avatar';
 import DateFormatter from '@/components/DateFormatter';
 import CoverImage from '@/components/blog/CoverImage';
 import styles from '@/styles/BlogPost.module.css';
@@ -38,7 +37,7 @@ const BlogPost = ({ post, preview }: Props) => {
           <div className={styles.BlogPost__loading}>Loading…</div>
         ) : (
           <article>
-            <CoverImage title={post.title} src={post.coverImage} width={'2000'} height={'1000'} />
+            <CoverImage title={post.title} src={post.image.url} width={post.image.width || '2000'} height={post.image.height || '1000'} />
 
             <div className={'siteWidth siteSidePadding'}>
               <h1 className={styles.BlogPost__title}>{post.title}</h1>
@@ -76,8 +75,7 @@ export async function getStaticProps({ params }: Params) {
     'slug',
     'author',
     'content',
-    'ogImage',
-    'coverImage',
+    'image',
     'tags',
     'lang',
   ]);
