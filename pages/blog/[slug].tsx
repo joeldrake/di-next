@@ -9,7 +9,10 @@ import PreviewBanner from '@/components/PreviewBanner';
 import Header from '@/components/Header';
 import DateFormatter from '@/components/DateFormatter';
 import CoverImage from '@/components/blog/CoverImage';
+
 import styles from '@/styles/BlogPost.module.css';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 type Props = {
   post: PostType;
@@ -26,29 +29,37 @@ const BlogPost = ({ post, preview }: Props) => {
       <Header />
       <Head>
         <title>{post.title} || Drake Innovation</title>
-        <meta property="og:image" content={post.coverImage} />
+        {post.image && <meta property="og:image" content={post.image.url} />}
         <link rel="shortcut icon" href="/images/dragon.png" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <meta name="description" content={post.excerpt} />
       </Head>
       {preview && <PreviewBanner />}
-      <div className={styles.BlogPost}>
+      <div className={cx('BlogPost', { 'BlogPost--no-image': !post.image })}>
         {router.isFallback ? (
-          <div className={styles.BlogPost__loading}>Loading…</div>
+          <div className={cx('BlogPost__loading')}>Loading…</div>
         ) : (
           <article>
-            <CoverImage title={post.title} src={post.image.url} width={post.image.width || '2000'} height={post.image.height || '1000'} />
+            {post.image && (
+              <CoverImage
+                className={cx('BlogPost__cover-mage')}
+                title={post.title}
+                src={post.image.url}
+                width={post.image.width || '2000'}
+                height={post.image.height || '1000'}
+              />
+            )}
 
             <div className={'siteWidth siteSidePadding'}>
-              <h1 className={styles.BlogPost__title}>{post.title}</h1>
+              <h1 className={cx('BlogPost__title')}>{post.title}</h1>
 
-              <p className={styles.BlogPost__subtitle}>
+              <p className={cx('BlogPost__subtitle')}>
                 <DateFormatter dateString={post.date} />
                 {post.author && <span>, {post.author}</span>}
               </p>
 
               <div
-                className={styles.BlogPost__markdown}
+                className={cx('BlogPost__markdown')}
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </div>

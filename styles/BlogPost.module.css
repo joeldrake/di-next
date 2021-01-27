@@ -1,12 +1,18 @@
 .BlogPost {
   padding-bottom: 3rem;
+  padding-top: 5rem;
+}
+
+.BlogPost--no-image {
+  padding-top: 7.5rem;
 }
 
 .BlogPost__title {
+  font-family: Times, 'Times New Roman', Serif;
   margin-top: 0;
-}
-.BlogPost__subtitle {
-  font-style: italic;
+  line-height: 1;
+  font-size: 4rem;
+  letter-spacing: -2px;
 }
 
 .BlogPost__markdown blockquote {

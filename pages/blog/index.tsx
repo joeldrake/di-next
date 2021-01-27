@@ -1,11 +1,13 @@
-import styles from '@/styles/BlogStart.module.css';
 import { getAllPosts } from '@/lib/api';
 import Head from 'next/head';
 import Post from '@/types/post';
 import Header from '@/components/Header';
-import cn from 'classnames';
 import PostPreview from '@/components/blog/PostPreview';
 import Contact from '@/components/presentation/Contact';
+
+import styles from '@/styles/BlogStart.module.css';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 type Props = {
   allPosts: Post[];
@@ -22,9 +24,12 @@ const Index = ({ allPosts }: Props) => {
         <meta property="og:image" content={'/images/joeldrake.jpg'} />
       </Head>
       <Header />
-      <div className={cn(styles.BlogStart, 'siteSidePadding', 'fadeIn', 'siteWidth')}>
+      <div className={cx('BlogStart', 'siteSidePadding', 'fadeIn', 'siteWidth')}>
         <div className={styles.BlogStart__top}>
           <h1 className={styles.BlogStart__headline}>Le Blog</h1>
+          <div className={styles.BlogStart__subtitle}>
+            A collection of different things I want to share with the internet
+          </div>
         </div>
 
         {heroPost && (

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 type Props = {
   title: string;
-  image: {
+  image?: {
     url: string;
     width: number;
     height: number;
@@ -20,14 +20,16 @@ const PostPreview = ({ title, image, date, slug, heroPost }: Props) => {
     <div className={styles.PostPreview}>
       <Link as={`/blog/${slug}`} href="/blog/[slug]">
         <a className={styles.PostPreview__link}>
-          <Image
-            className={styles.PostPreview__image}
-            src={image.url}
-            alt={title}
-            width={image.width || 960}
-            height={image.height || 480}
-            sizes={'50%'}
-          />
+          {image && (
+            <Image
+              className={styles.PostPreview__image}
+              src={image.url}
+              alt={title}
+              width={image.width || 960}
+              height={image.height || 480}
+              sizes={'50%'}
+            />
+          )}
           {heroPost ? (
             <h2 className={styles.PostPreview__headline}>{title}</h2>
           ) : (
@@ -38,6 +40,7 @@ const PostPreview = ({ title, image, date, slug, heroPost }: Props) => {
       <div className={styles.PostPreview__date}>
         <DateFormatter dateString={date} />
       </div>
+      <hr />
     </div>
   );
 };

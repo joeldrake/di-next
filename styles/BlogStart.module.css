@@ -10,6 +10,7 @@
 .BlogStart__top {
   min-height: 20rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -18,6 +19,9 @@
   font-size: 5rem;
   line-height: 4.2rem;
   font-family: Times, 'Times New Roman', Serif;
+}
+
+.BlogStart__subtitle {
 }
 
 .BlogStart__morePosts {
@@ -36,6 +40,7 @@
 @media screen and (max-width: 450px) {
   .BlogStart__top {
     min-height: 55vw;
+    padding-bottom: 3rem;
   }
   .BlogStart__headline {
     font-size: 15vw;

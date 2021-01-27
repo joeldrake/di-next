@@ -9,9 +9,9 @@ const About = () => {
 
         <p>
           Greetings,
-          <br />I am a web developer focusing on web apps and user interfaces. I consider myself
-          front end, because that is what I enjoy. But I have experience and knowledge of setting up
-          full tech stacks.
+          <br />I am a web developer focusing on web apps and user interfaces. I specialize in front
+          end, because that is what I enjoy. But I have experience and knowledge of setting up full
+          tech stacks.
         </p>
         <p>
           I have been building websites since I was young. Was part of a startup a few years back,
