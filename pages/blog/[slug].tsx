@@ -42,11 +42,10 @@ const BlogPost = ({ post, preview }: Props) => {
           <article>
             {post.image && (
               <CoverImage
-                className={cx('BlogPost__cover-mage')}
                 title={post.title}
                 src={post.image.url}
-                width={post.image.width || '2000'}
-                height={post.image.height || '1000'}
+                width={`${post.image.width}` || '2000'}
+                height={`${post.image.height}` || '1000'}
               />
             )}
 

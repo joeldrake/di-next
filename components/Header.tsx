@@ -1,20 +1,22 @@
-import cn from 'classnames';
-import styles from '@/styles/Header.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { createRef } from 'react';
+import { useState } from 'react';
+
+import styles from '@/styles/Header.module.css';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 const Header = () => {
   const router: any = useRouter();
-  const navToggle: any = createRef();
-  let addedEventListeners = false;
+  const [addedEventListeners, setAddedEventListeners] = useState(false);
 
   const onClickNavLink = (e: any) => {
-    console.log('HEY', e.target.hash);
     if (addedEventListeners) {
-      navToggle.checked = false;
       removeEventListeners();
     }
+
+    const navToggle: any = document.getElementById('navToggle') || {};
+    navToggle.checked = false;
 
     const hash = e.target.hash;
     if (!hash) return;
@@ -31,61 +33,79 @@ const Header = () => {
   };
 
   const navToggleToggle = () => {
-    if (navToggle.checked) {
-      addEventListeners();
-    } else {
-      removeEventListeners();
-    }
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const navToggle: any = document.getElementById('navToggle') || {};
+        console.log('navToggle.checked', navToggle.checked);
+
+        if (navToggle.checked) {
+          addEventListeners();
+        } else {
+          removeEventListeners();
+        }
+      });
+    });
   };
 
   const addEventListeners = () => {
     if (!addedEventListeners) {
-      addedEventListeners = true;
+      setAddedEventListeners(true);
       document.addEventListener('click', handleClick);
     }
   };
 
   const removeEventListeners = () => {
-    addedEventListeners = false;
+    setAddedEventListeners(false);
     document.removeEventListener('click', handleClick);
   };
 
-  const handleClick = async (e: any) => {
+  const handleClick = (e: any) => {
     const target = e.target;
+    const navToggle: any = document.getElementById('navToggle') || {};
 
     const isHeader__nav = target.closest('#Header__nav');
+    const isHeader__navToggle = target.classList.contains('Header__navButtonPreventClickStop');
 
-    console.log(target, isHeader__nav);
-    if (!isHeader__nav) {
-      navToggle.checked = false;
-      window.requestAnimationFrame(() => {
-        removeEventListeners();
-      });
-    }
+    if (target === navToggle || isHeader__nav || isHeader__navToggle) return;
+
+    navToggle.checked = false;
+    removeEventListeners();
   };
 
   return (
-    <header className={styles.Header}>
-      <div className={cn(styles.Header__inner, 'siteWidth', 'siteSidePadding')}>
-        <div className={styles.Header__logo + ' animateUnderline'}>
+    <header className={cx('Header')}>
+      <div className={cx('Header__inner', 'siteWidth', 'siteSidePadding')}>
+        <div className={cx('Header__logo', 'animateUnderline')}>
           <Link href="/">
             <a>Joel Drake</a>
           </Link>
         </div>
+
         <input
           type="checkbox"
           id="navToggle"
-          ref={navToggle}
           onChange={navToggleToggle}
-          className={styles.Header__navButton}
+          className={cx('Header__navButton')}
           aria-label="Open navigation"
         />
-        <label className={styles.Header__navToggle} htmlFor="navToggle">
-          <img src="/images/menu.svg" className={styles.Header__navOpen} alt="Open navigation" />
-          <img src="/images/close.svg" className={styles.Header__navClose} alt="Close navigation" />
+
+        <label
+          className={cx('Header__navToggle', 'Header__navButtonPreventClickStop')}
+          htmlFor="navToggle"
+        >
+          <img
+            src="/images/menu.svg"
+            className={cx('Header__navOpen', 'Header__navButtonPreventClickStop')}
+            alt="Open navigation"
+          />
+          <img
+            src="/images/close.svg"
+            className={cx('Header__navClose', 'Header__navButtonPreventClickStop')}
+            alt="Close navigation"
+          />
         </label>
 
-        <nav className={cn(styles.Header__nav, 'animateUnderline')} id="Header__nav">
+        <nav className={cx('Header__nav', 'animateUnderline')} id="Header__nav">
           <Link href="/#about">
             <a onClick={onClickNavLink}>
               About
