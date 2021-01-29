@@ -4,11 +4,24 @@
 }
 
 .PostPreview__image {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .PostPreview__headline {
-  line-height: 1.2;
-
+  line-height: 1;
   margin: 1rem 0;
+
+  font-family: Times, 'Times New Roman', Serif;
+  letter-spacing: -2px;
+}
+
+.PostPreview hr {
+  margin-bottom: 2rem;
+}
+
+.PostPreview__link {
+  color: #222222;
+  text-decoration: none;
 }

@@ -4,6 +4,13 @@
   margin: 0 auto;
 }
 
+.CoverImage img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 @media screen and (max-width: 832px) {
   .CoverImage {
     padding: 1rem;
@@ -14,4 +21,8 @@
   .CoverImage {
     padding: 0;
   }
+}
+
+.CoverImage--noPaddingBottom {
+  padding-bottom: 0;
 }

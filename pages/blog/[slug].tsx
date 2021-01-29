@@ -24,6 +24,7 @@ const BlogPost = ({ post, preview }: Props) => {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  const modifiers = { 'BlogPost--no-image': !post.image };
   return (
     <>
       <Header />
@@ -35,7 +36,7 @@ const BlogPost = ({ post, preview }: Props) => {
         <meta name="description" content={post.excerpt} />
       </Head>
       {preview && <PreviewBanner />}
-      <div className={cx('BlogPost', { 'BlogPost--no-image': !post.image })}>
+      <div className={cx('BlogPost', 'fadeIn', modifiers)}>
         {router.isFallback ? (
           <div className={cx('BlogPost__loading')}>Loading…</div>
         ) : (
@@ -52,10 +53,12 @@ const BlogPost = ({ post, preview }: Props) => {
             <div className={'siteWidth siteSidePadding'}>
               <h1 className={cx('BlogPost__title')}>{post.title}</h1>
 
-              <p className={cx('BlogPost__subtitle')}>
-                <DateFormatter dateString={post.date} />
-                {post.author && <span>, {post.author}</span>}
-              </p>
+              {post.date && (
+                <p className={cx('BlogPost__subtitle')}>
+                  <DateFormatter dateString={post.date} />
+                  {post.author && <span>, {post.author}</span>}
+                </p>
+              )}
 
               <div
                 className={cx('BlogPost__markdown')}

@@ -1,7 +1,5 @@
 ---
 title: 'Pasta med belugalinser, portabellosvamp och aubergine'
-author: 'Joel Drake'
-date: '2021-01-26'
 tags: recipe
 lang: sv
 ---

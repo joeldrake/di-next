@@ -1,7 +1,9 @@
 import DateFormatter from '@/components/DateFormatter';
 import styles from '@/styles/PostPreview.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
+
+// remove for static ixport
+// import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -18,10 +20,11 @@ type Props = {
 const PostPreview = ({ title, image, date, slug, heroPost }: Props) => {
   return (
     <div className={styles.PostPreview}>
+      <hr />
       <Link as={`/blog/${slug}`} href="/blog/[slug]">
         <a className={styles.PostPreview__link}>
           {image && (
-            <Image
+            <img
               className={styles.PostPreview__image}
               src={image.url}
               alt={title}
@@ -30,17 +33,15 @@ const PostPreview = ({ title, image, date, slug, heroPost }: Props) => {
               sizes={'50%'}
             />
           )}
-          {heroPost ? (
-            <h2 className={styles.PostPreview__headline}>{title}</h2>
-          ) : (
-            <h3 className={styles.PostPreview__headline}>{title}</h3>
-          )}
+
+          <h2 className={styles.PostPreview__headline}>{title}</h2>
         </a>
       </Link>
-      <div className={styles.PostPreview__date}>
-        <DateFormatter dateString={date} />
-      </div>
-      <hr />
+      {date && (
+        <div className={styles.PostPreview__date}>
+          <DateFormatter dateString={date} />
+        </div>
+      )}
     </div>
   );
 };

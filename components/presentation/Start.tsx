@@ -24,6 +24,7 @@ const Start = () => {
         src={'/images/joeldrake.jpg'}
         width={'1600'}
         height={'1067'}
+        noPaddingBottom
       />
 
       <div

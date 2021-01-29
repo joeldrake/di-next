@@ -14,6 +14,7 @@
   align-items: flex-end;
   justify-content: center;
   pointer-events: none;
+  padding-top: 2rem; /* since bottom padding is removed from CoverImage */
 }
 
 .Start__continueLink {

@@ -21,14 +21,11 @@
   font-family: Times, 'Times New Roman', Serif;
 }
 
-.BlogStart__subtitle {
-}
-
 .BlogStart__morePosts {
   display: grid;
   padding: 2rem 0;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2rem 3rem;
 }
 
 @media screen and (max-width: 600px) {
