@@ -1,12 +1,11 @@
 {
-    "prettier.configPath": "./.prettierrc.js",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "window.title": "${dirty}DI ${separator} ${activeEditorMedium}",
-    "workbench.colorCustomizations": {
-      "titleBar.activeForeground": "#000",
-      "titleBar.inactiveForeground": "#000",
-      "titleBar.activeBackground": "#ffdd18",
-      "titleBar.inactiveBackground": "#ae960f"
-      }
+  "prettier.configPath": "./.prettierrc.js",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.title": "${dirty}DI ${separator} ${activeEditorMedium}",
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#fff",
+    "titleBar.inactiveForeground": "#fff",
+    "titleBar.activeBackground": "#007200",
+    "titleBar.inactiveBackground": "#004000"
   }
-  
+}
