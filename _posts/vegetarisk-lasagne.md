@@ -3,7 +3,7 @@ title: 'Vegetarisk lasagne'
 excerpt: 'Det här är en god italiensk lasagne med mycket smak och utan kött.'
 author: 'Joel Drake'
 date: '2021-01-28'
-tags: recipe
+tags: recept
 lang: sv
 ---
 

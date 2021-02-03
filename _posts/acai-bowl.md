@@ -5,7 +5,7 @@ image:
   url: '/assets/blog/acai-bowl.jpg'
   width: 1000,
   height: 794,
-tags: recipe
+tags: recept
 lang: sv
 ---
 

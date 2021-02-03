@@ -5,7 +5,7 @@ image:
   url: '/assets/blog/hallonchiasylt.jpg'
   width: 800,
   height: 533,
-tags: recipe
+tags: recept
 lang: sv
 ---
 

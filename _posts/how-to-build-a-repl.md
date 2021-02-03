@@ -1,9 +1,13 @@
 ---
 title: 'How to build a REPL'
 excerpt: 'Easy concept of how to build a repl'
+image:
+  url: '/assets/blog/code.jpg'
+  width: 1200,
+  height: 600,
 author: 'Joel Drake'
 date: '2021-02-02'
-tags: tech
+tags: coding
 lang: en
 ---
 

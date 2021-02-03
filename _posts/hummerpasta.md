@@ -7,7 +7,7 @@ image:
   height: 794,
 author: 'Joel Drake'
 date: '2020-12-02'
-tags: recipe
+tags: recept
 lang: sv
 ---
 

@@ -2,6 +2,7 @@ type PostType = {
   slug: string;
   title: string;
   date: string;
+  hidden?: boolean;
   image?: {
     url: string;
     width: number;
@@ -10,7 +11,7 @@ type PostType = {
   author: string;
   excerpt?: string;
   content: string;
-  tags?: [string];
+  tags?: string;
   lang?: string;
 };
 

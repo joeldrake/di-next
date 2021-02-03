@@ -1,9 +1,10 @@
 import DateFormatter from '@/components/DateFormatter';
 import styles from '@/styles/PostPreview.module.css';
-import Link from 'next/link';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
-// remove for static ixport
-// import Image from 'next/image';
+import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -15,17 +16,20 @@ type Props = {
   date: string;
   slug: string;
   heroPost?: boolean;
+  tags?: string;
+  lang?: string;
 };
 
-const PostPreview = ({ title, image, date, slug, heroPost }: Props) => {
+const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
+  const tagsArray = tags ? tags.split(',') : null;
+
   return (
-    <div className={styles.PostPreview}>
-      <hr />
+    <div className={cx('PostPreview')}>
       <Link as={`/blog/${slug}`} href="/blog/[slug]">
-        <a className={styles.PostPreview__link}>
+        <a className={cx('PostPreview__link')}>
           {image && (
-            <img
-              className={styles.PostPreview__image}
+            <Image
+              className={cx('PostPreview__image')}
               src={image.url}
               alt={title}
               width={image.width || 960}
@@ -34,12 +38,23 @@ const PostPreview = ({ title, image, date, slug, heroPost }: Props) => {
             />
           )}
 
-          <h2 className={styles.PostPreview__headline}>{title}</h2>
+          <h2 className={cx('PostPreview__headline')}>{title}</h2>
         </a>
       </Link>
       {date && (
-        <div className={styles.PostPreview__date}>
+        <div className={cx('PostPreview__date')}>
           <DateFormatter dateString={date} />
+        </div>
+      )}
+      {(tagsArray || lang) && (
+        <div className={cx('PostPreview__tags')}>
+          {lang && <div className={cx('PostPreview__tag')}>{lang === 'sv' ? `🇸🇪` : `🇬🇧`}</div>}
+          {tagsArray &&
+            tagsArray.map((tag, i) => (
+              <div key={i} className={cx('PostPreview__tag')}>
+                {tag}
+              </div>
+            ))}
         </div>
       )}
     </div>

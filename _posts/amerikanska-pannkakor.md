@@ -1,6 +1,6 @@
 ---
 title: 'Amerikanska pannkakor'
-tags: recipe
+tags: recept
 lang: sv
 ---
 

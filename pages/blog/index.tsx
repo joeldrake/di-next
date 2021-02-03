@@ -15,7 +15,8 @@ type Props = {
 
 const Index = ({ allPosts }: Props) => {
   const heroPost = allPosts[0];
-  const posts = allPosts.slice(1);
+  const posts = allPosts.slice(1).filter((post) => !post.hidden);
+
   return (
     <>
       <Head>
@@ -25,26 +26,28 @@ const Index = ({ allPosts }: Props) => {
       </Head>
       <Header />
       <div className={cx('BlogStart', 'siteSidePadding', 'fadeIn', 'siteWidth')}>
-        <div className={styles.BlogStart__top}>
-          <h1 className={styles.BlogStart__headline}>Le Blog</h1>
-          <div className={styles.BlogStart__subtitle}>
+        <div className={cx('BlogStart__top')}>
+          <h1 className={cx('BlogStart__headline')}>Le Blog</h1>
+          <div className={cx('BlogStart__subtitle')}>
             A collection of different things I want to share with the internet
           </div>
         </div>
 
         {heroPost && (
-          <div className={styles.BlogStart__heroPost}>
+          <div className={cx('BlogStart__heroPost')}>
             <PostPreview
               title={heroPost.title}
               image={heroPost.image}
               date={heroPost.date}
               slug={heroPost.slug}
+              tags={heroPost.tags}
+              lang={heroPost.lang}
               heroPost
             />
           </div>
         )}
         {posts.length > 0 && (
-          <div className={styles.BlogStart__morePosts}>
+          <div className={cx('BlogStart__morePosts')}>
             {posts.map((post) => (
               <PostPreview
                 key={post.slug}
@@ -52,6 +55,8 @@ const Index = ({ allPosts }: Props) => {
                 image={post.image}
                 date={post.date}
                 slug={post.slug}
+                tags={post.tags}
+                lang={post.lang}
               />
             ))}
           </div>
@@ -65,7 +70,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'image']);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'image', 'tags', 'lang']);
 
   return {
     props: { allPosts },

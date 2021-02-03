@@ -1,10 +1,16 @@
+.PostPreview {
+  background: var(--color-off-white);
+  padding: 1rem 1rem 1.75rem 1rem;
+  border-radius: 1rem;
+}
+
 .PostPreview__link {
   color: #222222;
   text-decoration: none;
 }
 
 .PostPreview__image {
-  margin-top: 1rem;
+  border-radius: 0.5rem;
   max-width: 100%;
   height: auto;
 }
@@ -24,4 +30,15 @@
 .PostPreview__link {
   color: #222222;
   text-decoration: none;
+}
+
+.PostPreview__tags {
+  margin-top: 1.5rem;
+}
+
+.PostPreview__tag {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
 }

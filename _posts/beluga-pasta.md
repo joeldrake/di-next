@@ -1,6 +1,6 @@
 ---
 title: 'Pasta med belugalinser, portabellosvamp och aubergine'
-tags: recipe
+tags: recept
 lang: sv
 ---
 

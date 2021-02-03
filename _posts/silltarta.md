@@ -3,7 +3,7 @@ title: 'Silltårta'
 excerpt: 'Bör räcka till ca 8-10 personer. Görs gärna en dag i förväg.'
 author: 'Joel Drake'
 date: '2021-01-28'
-tags: recipe
+tags: recept
 lang: sv
 ---
 

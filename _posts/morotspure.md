@@ -3,7 +3,7 @@ title: 'Morotspuré'
 excerpt: 'Den här morotspurén passar utmärkt till grillat. Den kan vara ett alternativ till ungsbakad potatis.'
 author: 'Joel Drake'
 date: '2021-01-28'
-tags: recipe
+tags: recept
 lang: sv
 ---
 
