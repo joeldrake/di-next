@@ -19,15 +19,43 @@
 .Header__logo,
 .Header__navToggle,
 .Header__navButton,
+.Header__backButton,
 .Header__nav {
   pointer-events: all;
+}
+
+.Header__backButton {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: block;
+
+  flex-shrink: 0;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Header__backButton:hover,
+.Header__backButton:active,
+.Header__backButton:focus {
+  outline: 0;
+}
+
+.Header__backButton:hover,
+.Header__backButton:active,
+.Header__backButton:focus {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .Header__logo {
   width: 100%;
 }
 
-.Header__logo a {
+.Header__homeButton {
   color: #222;
   text-decoration: none;
   padding: 1rem;
@@ -59,7 +87,7 @@
   color: #222;
 }
 
-.Header__logo a:before,
+.Header__homeButton:before,
 .Header__nav a:before {
   background-color: #222 !important;
 }
@@ -217,7 +245,7 @@
     right: 0.5rem;
   }
 
-  .Header__logo a {
+  .Header__homeButton {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     width: 25vw;
     display: block;

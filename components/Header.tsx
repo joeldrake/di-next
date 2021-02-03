@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { onWindowResize } from '@/lib/onWindowResize.ts';
 
 import styles from '@/styles/Header.module.css';
 import classNames from 'classnames/bind';
@@ -8,6 +9,7 @@ const cx = classNames.bind(styles);
 
 const Header = () => {
   const router: any = useRouter();
+  const [windowSize,setWindowSize] = useState(0);
   const { route } = router;
 
   useEffect(() => {
@@ -18,6 +20,13 @@ const Header = () => {
       const target = document.querySelector('#header');
       if (target) observer.observe(target);
     }
+    const unWindowResize = onWindowResize(updateWindowSize);
+    updateWindowSize();
+
+    return () => {
+      // run on unmount
+      unWindowResize();
+    };
   }, []);
 
   const callback = (entries: any) => {
@@ -38,6 +47,12 @@ const Header = () => {
       window.history.replaceState({}, document.title, cleanUrl);
     }
   };
+
+  const updateWindowSize = () => {
+    if(typeof window === 'undefined') return;
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    setWindowSize(vw)
+  }
 
   const onClickNavLink = (e: any) => {
     if (route != '/') return;
@@ -85,13 +100,25 @@ const Header = () => {
     }
   };
 
+  const isBlogPost = () => {
+    return route === '/blog/[slug]' && windowSize <= 768;
+  };
+
   return (
     <header className={cx('Header')} id="header">
       <div className={cx('Header__inner', 'siteWidth', 'siteSidePadding')}>
-        <div className={cx('Header__logo', 'animateUnderline')}>
-          <Link href="/">
-            <a>Joel Drake</a>
-          </Link>
+        <div className={cx('Header__logo', { animateUnderline: !isBlogPost() })}>
+          {isBlogPost() ? (
+            <Link href="/blog">
+              <a className={cx('Header__backButton')}>
+                <img src="/images/arrow-left.svg" alt="Back" />
+              </a>
+            </Link>
+          ) : (
+            <Link href="/">
+              <a className={cx('Header__homeButton')}>Joel Drake</a>
+            </Link>
+          )}
         </div>
 
         <input

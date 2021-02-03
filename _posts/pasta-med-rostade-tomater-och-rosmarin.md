@@ -13,23 +13,23 @@ lang: sv
 
 Väldigt enkel rätt att laga. Blir vegansk om man väljer pasta utan ägg (vilket är all vanlig pasta).
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 400 g	Körsbärstomater
-> 1 burk	Stora vita bönor, kokta
-> 2 st	Vitlöksklyftor
-> 2 msk	Olivolja
-> 2 msk	Balsamvinäger
-> 1 tsk	Salt
-> 1 krm	Peppar
-> 300 g	Pasta
->
-> Rosmarin färsk
-> Basilika färsk
-> ```
+```
+400 g	Körsbärstomater
+1 burk	Stora vita bönor, kokta
+2 st	Vitlöksklyftor
+2 msk	Olivolja
+2 msk	Balsamvinäger
+1 tsk	Salt
+1 krm	Peppar
+300 g	Pasta
 
-### Steg
+Rosmarin färsk
+Basilika färsk
+```
+
+## Steg
 
 1. Sätt ugnen på 225 grader.
 

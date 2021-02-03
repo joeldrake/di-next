@@ -14,15 +14,28 @@
   font-size: 4rem;
   letter-spacing: -2px;
 }
+
+@media screen and (max-width: 600px) {
+  .BlogPost__title {
+    font-size: 3rem;
+  }
+}
+
 .BlogPost__subtitle {
   margin-bottom: 2rem;
 }
 
-.BlogPost__markdown blockquote {
-  border-left: 5px solid var(--site-success);
-  background-color: var(--site-success-lighter);
-  margin: 0;
-  padding: 0.1rem 1rem;
+.BlogPost__markdown h1,
+.BlogPost__markdown h2,
+.BlogPost__markdown h3 {
+  font-family: Times, 'Times New Roman', Serif;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin: 2rem 0 1rem 0;
+}
+.BlogPost__markdown h4 {
+  line-height: 1;
+  margin: 2rem 0 0 0;
 }
 
 .BlogPost__markdown pre {
@@ -34,9 +47,14 @@
   display: none;
 }
 
-.BlogPost__markdown code[class='language-recipe'] {
+.BlogPost__markdown blockquote,
+.BlogPost--recipe .BlogPost__markdown pre {
   border-left: 5px solid var(--site-success);
   background-color: var(--site-success-lighter);
   margin: 0;
   padding: 0.1rem 1rem;
+}
+
+.BlogPost--recipe .BlogPost__markdown pre {
+  padding: 1rem;
 }

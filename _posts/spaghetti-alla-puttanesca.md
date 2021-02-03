@@ -9,20 +9,20 @@ lang: sv
 
 Väldigt enkel rätt att laga. Fungerar lika bra till vardags och i matlåda som den gör till helgen. Servera med rödvin och parmesan så har du en festmåltid!
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 2 burkar    Plommontomater
-> 2.5 tsk    Sardellcrème
-> 0,5 dl    Olivolja
-> 0,5 st    Chili frukt
-> 1 burk    Kalamataoliver urkärnade
-> 2 msk    Kapris medelstora
-> 2 msk    Bladpersilja
-> 2 st    Vitlöksklyftor
-> ```
+```
+2 burkar    Plommontomater
+2.5 tsk    Sardellcrème
+0,5 dl    Olivolja
+0,5 st    Chili frukt
+1 burk    Kalamataoliver urkärnade
+2 msk    Kapris medelstora
+2 msk    Bladpersilja
+2 st    Vitlöksklyftor
+```
 
-### Steg
+## Steg
 
 1. Öppna 2 burkar plommontomater och skär tomaterna med en sax direkt i burken.
 

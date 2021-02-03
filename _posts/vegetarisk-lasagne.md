@@ -9,32 +9,32 @@ lang: sv
 
 Det här är en god italiensk lasagne med mycket smak och utan kött.
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> Tomatsås
-> 	2 st	Gul lök
-> 	4 st	Vitlöksklyftor
-> 	2 msk	Olivolja
-> 	2 frp.	Krossade tomater
-> 	2 tsk	Oregano eller basilika
-> 	1 tsk	Honung
->
-> 	Salt och peppar
->
-> 2 stora	Aubergin
-> 2 tsk	Salt
-> 2 påsar	Mozzarella
-> 1 kruka	Basilika
-> 12 st	Lasagneplattor färska
-> 2 dl	Mjölk
-> 50 g	Parmesan
->
-> Gott bröd
-> Grönsallad
-> ```
+```
+Tomatsås
+	2 st	Gul lök
+	4 st	Vitlöksklyftor
+	2 msk	Olivolja
+	2 frp.	Krossade tomater
+	2 tsk	Oregano eller basilika
+	1 tsk	Honung
 
-### Steg
+	Salt och peppar
+
+2 stora	Aubergin
+2 tsk	Salt
+2 påsar	Mozzarella
+1 kruka	Basilika
+12 st	Lasagneplattor färska
+2 dl	Mjölk
+50 g	Parmesan
+
+Gott bröd
+Grönsallad
+```
+
+## Steg
 
 1. Laga först en tomatsås genom att hacka och steka löken och blanda i de andra ingredienserna.
 

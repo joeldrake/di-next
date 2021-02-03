@@ -11,27 +11,27 @@ tags: recipe
 lang: sv
 ---
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 2 st	Humrar (kokta)
-> 0.5 dl	Olivolja
-> 4 st	Vitlöksklyftor
-> 1 st	Gul lök
-> 0.5 tsk	Chiliflakes
-> 0.75 dl	Tomatpuré
-> 2 dl	Vitt vin
-> 5 dl	Hummerbuljong från flaska
-> 1.5 dl	Vispgrädde
-> 1 knippe	Bladpersilja
-> 1 st	Citron
-> 500 g	Bucatini, linguine eller spaghetti
->
-> Salt
-> Peppar
-> ```
+```
+2 st	Humrar (kokta)
+0.5 dl	Olivolja
+4 st	Vitlöksklyftor
+1 st	Gul lök
+0.5 tsk	Chiliflakes
+0.75 dl	Tomatpuré
+2 dl	Vitt vin
+5 dl	Hummerbuljong från flaska
+1.5 dl	Vispgrädde
+1 knippe	Bladpersilja
+1 st	Citron
+500 g	Bucatini, linguine eller spaghetti
 
-### Steg
+Salt
+Peppar
+```
+
+## Steg
 
 1. Vrid av stjärtarna från humrarna och skala dem. Bryt skalet i mindre bitar. Knäck klorna med nötknäppare. Lägg köttet från klorna för sig.
 

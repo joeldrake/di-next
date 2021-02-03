@@ -24,7 +24,14 @@ const BlogPost = ({ post, preview }: Props) => {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  const modifiers = { 'BlogPost--no-image': !post.image };
+  const { image, tags } = post;
+  const modifiers: any = { 'BlogPost--no-image': !image };
+
+  if (tags) {
+    tags.forEach((tag) => {
+      modifiers[`BlogPost--${tag}`] = true;
+    });
+  }
   return (
     <>
       <Header />

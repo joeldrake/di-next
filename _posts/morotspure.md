@@ -9,19 +9,19 @@ lang: sv
 
 Den här morotspurén passar utmärkt till grillat. Den kan vara ett alternativ till ungsbakad potatis.
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 1 kg    Morötter
-> 5 st    Vitlöksklyftor
-> 1 kruka Rosmarin
-> 1 dl    Olivolja
-> 2 dl  Creme fraiche
->
-> Salt och peppar
-> ```
+```
+1 kg    Morötter
+5 st    Vitlöksklyftor
+1 kruka Rosmarin
+1 dl    Olivolja
+2 dl  Creme fraiche
 
-### Steg
+Salt och peppar
+```
+
+## Steg
 
 1. Sätt ugnen på 220 grader. Skala och hacka morötterna (behöver inte vara så noga, det ska mixas senare).
 

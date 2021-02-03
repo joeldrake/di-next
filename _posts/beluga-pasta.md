@@ -4,24 +4,24 @@ tags: recipe
 lang: sv
 ---
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> Krossade tomater  1 eller 2	paket
-> Belugalinser
-> Aubergine   1st
-> Portabellosvampar 2/3 st
-> Vitlök  2 klyftor
-> Gul lök 1st
-> Balsamvinäger 2 msk
-> Grönsaksbuljong   1 tärning
-> Salt
-> Peppar
-> Rapsolja
-> 300 g	Pasta
-> ```
+```
+Krossade tomater  1 eller 2	paket
+Belugalinser
+Aubergine   1st
+Portabellosvampar 2/3 st
+Vitlök  2 klyftor
+Gul lök 1st
+Balsamvinäger 2 msk
+Grönsaksbuljong   1 tärning
+Salt
+Peppar
+Rapsolja
+300 g	Pasta
+```
 
-### Steg
+## Steg
 
 1. Skölj och hacka **aubergine** och **portabellosvampar**. Stek sedan i rapsolja tills ingredienserna har vattnat av sig.
 

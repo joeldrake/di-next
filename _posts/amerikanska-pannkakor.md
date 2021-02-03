@@ -4,22 +4,22 @@ tags: recipe
 lang: sv
 ---
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 2,5 dl  Vetemjöl
-> 2 tsk  Bakpulver
-> 0,5 tsk  Salt
-> 1 msk  Socker
-> 2,5 dl  Mjölk
-> 2 msk  Smör
-> 1 st  Ägg
-> 2 msk  Kokosolja
->
-> Lönnsirap
-> ```
+```
+2,5 dl  Vetemjöl
+2 tsk  Bakpulver
+0,5 tsk  Salt
+1 msk  Socker
+2,5 dl  Mjölk
+2 msk  Smör
+1 st  Ägg
+2 msk  Kokosolja
 
-### Steg
+Lönnsirap
+```
+
+## Steg
 
 1. Blanda ihop vetemjöl, bakpulver, salt och socker i en bunke.
 

@@ -9,23 +9,23 @@ lang: sv
 
 Somrig potatisrätt som passar bra att äta kall tillsammans med kallrökt lax på picnic.
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 1 kilo  Potatis
-> 1   Rödlök
-> 3 msk   Kapris
-> 4 msk   Gräslök
-> 2 msk   Dijonsenap
-> 1,5 msk Vitvinsvinäger
-> 0,5 dl  Rapsolja
-> 0,5 dl  Olivilja
-> 1 knippe    Rädisor
->
-> Salt och peppar
-> ```
+```
+1 kilo  Potatis
+1   Rödlök
+3 msk   Kapris
+4 msk   Gräslök
+2 msk   Dijonsenap
+1,5 msk Vitvinsvinäger
+0,5 dl  Rapsolja
+0,5 dl  Olivilja
+1 knippe    Rädisor
 
-### Steg
+Salt och peppar
+```
+
+## Steg
 
 1. Koka potatisen i ca 20 min. Låt den svalna och skär i lagom stora bitar.
 

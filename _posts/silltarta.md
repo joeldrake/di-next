@@ -9,25 +9,25 @@ lang: sv
 
 Bör räcka till ca 8-10 personer. Görs gärna en dag i förväg.
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> Botten
-> 200 g   Kavring (mörk)
-> 75 g    Smör
->
-> Fyllning
-> 4 st    Gelatinblad
-> 2 burkar (ca 200 g) Matjesillfileér
-> 1 st    Röd lök
-> 1 burk (250g)   Kesella
-> 3 dl    Gräddfil eller lätt crème fraiche
->
-> Svartpeppar
-> 1,5 dl  Gräslök
-> ```
+```
+Botten
+200 g   Kavring (mörk)
+75 g    Smör
 
-### Steg
+Fyllning
+4 st    Gelatinblad
+2 burkar (ca 200 g) Matjesillfileér
+1 st    Röd lök
+1 burk (250g)   Kesella
+3 dl    Gräddfil eller lätt crème fraiche
+
+Svartpeppar
+1,5 dl  Gräslök
+```
+
+## Steg
 
 1. Finhacka kavringen eller kör i mixer. Smält smöret och blanda med kavringen.
 

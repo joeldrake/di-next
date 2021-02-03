@@ -9,21 +9,21 @@ tags: recipe
 lang: sv
 ---
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 1 st  Avokado mogen
-> 1 st  Banan
-> 0.5 paket fryst (125g)  Hallon/blåbär
-> 2 tsk Acai pulver
-> 2 dl  Vegomjölk (t.ex. iKaffe)
-> 1 dl  Kokosflingor
-> 1 st  Kiwi
-> 1 dl  Mango 0.5 dl
-> Chiafrön
-> ```
+```
+1 st  Avokado mogen
+1 st  Banan
+0.5 paket fryst (125g)  Hallon/blåbär
+2 tsk Acai pulver
+2 dl  Vegomjölk (t.ex. iKaffe)
+1 dl  Kokosflingor
+1 st  Kiwi
+1 dl  Mango 0.5 dl
+Chiafrön
+```
 
-### Steg
+## Steg
 
 1. Mixa avokado, banan, hallon/blåbär, acai och vegomjölk.
 

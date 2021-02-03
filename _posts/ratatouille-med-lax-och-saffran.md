@@ -6,30 +6,30 @@ tags: recipe
 lang: sv
 ---
 
-### Ingredienser
+## Ingredienser
 
-> ```
-> 400 g   Krossade tomater
-> 4 st   Vitlöksklyftor
-> 1 st   Rödlök
-> 1   Aubergine
-> 3 st   Paprikor (ej gröna)
-> 1 st   Citron
-> Timjan
-> Salt
-> Peppar
-> Balsamvinäger
->
-> 0.5 g   Saffran
-> 2 dl   Crème fraiche
->
-> Lax
-> Olivolja
->
-> Ris
-> ```
+```
+400 g   Krossade tomater
+4 st   Vitlöksklyftor
+1 st   Rödlök
+1   Aubergine
+3 st   Paprikor (ej gröna)
+1 st   Citron
+Timjan
+Salt
+Peppar
+Balsamvinäger
 
-### Steg
+0.5 g   Saffran
+2 dl   Crème fraiche
+
+Lax
+Olivolja
+
+Ris
+```
+
+## Steg
 
 1. Hacka lök, aubergine och paprika. Ner med allt i en stor gryta och låt steka ett tag.
 
