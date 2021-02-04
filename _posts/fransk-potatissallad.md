@@ -13,7 +13,7 @@ Somrig potatisrätt som passar bra att äta kall tillsammans med kallrökt lax p
 
 ```
 1 kilo  Potatis
-1   Rödlök
+1       Rödlök
 3 msk   Kapris
 4 msk   Gräslök
 2 msk   Dijonsenap
