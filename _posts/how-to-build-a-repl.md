@@ -21,54 +21,7 @@ It's a great way to set up a sandbox for your component library (or whatever) wh
 
 ### Demo
 
-<div class="repl-demo">
-  <textarea id="code" oninput="update()" style="min-height:100px"><h1>Hello 👋</h1>
-<p>I am a REPL</p></textarea>
-  <iframe id="output"></iframe>
-</div>
-
-<script>
-  const textarea = document.getElementById('code');
-  const iframe = document.getElementById('output');
-
-  const srcdoc = `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <script type="module">
-          function iframe_update(source) {
-            // Select all scripts found in body and execute them with import() to get scripts to work
-            const scripts = document.body.querySelectorAll('script');
-            if (scripts.length) {
-              scripts.forEach((script) => {
-                const blob = new Blob([script.innerHTML], { type: 'text/javascript' });
-                const url = URL.createObjectURL(blob);
-                import(url);
-              });
-            }
-
-            document.body.innerHTML = source;
-          }
-          window.addEventListener(
-            'message',
-            (e) => {
-              iframe_update(e.data);
-            },
-            false
-          );
-        <\/script>
-      </head>
-      <body></body>
-    </html>
-  `;
-
-  iframe.srcdoc = srcdoc;
-
-  function update() {
-    iframe.contentWindow.postMessage(textarea.value, '*');
-  }
-  setTimeout(()=>update(),500);
-</script>
+<iframe src="/repl" style="width:100%;height:260px;border:0;"></iframe>
 
 ## Lets build it
 
@@ -223,7 +176,7 @@ Add some flexbox to it to get the windows nicely sized.
 }
 ```
 
-## Conclution
+## Conclusion
 
 This is the basic concept of having a textarea where you can type code and have it display in a window next to it. To get this usefull in your project you will most likely add more features and finess to this.
 

@@ -134,26 +134,3 @@ a {
     padding-right: 1rem;
   }
 }
-
-.repl-demo {
-  display: flex;
-  flex-direction: row;
-}
-
-@media screen and (max-width: 600px) {
-  .repl-demo {
-    flex-direction: column;
-  }
-}
-
-.repl-demo #code {
-  font-family: monospace;
-  font-size: 1rem;
-  padding: 1rem;
-}
-
-.repl-demo #code,
-.repl-demo #output {
-  width: 100%;
-  border: 1px solid #dadce0;
-}
