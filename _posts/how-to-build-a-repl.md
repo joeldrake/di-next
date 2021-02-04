@@ -178,8 +178,8 @@ Add some flexbox to it to get the windows nicely sized.
 
 ## Conclusion
 
-This is the basic concept of having a textarea where you can type code and have it display in a window next to it. To get this usefull in your project you will most likely add more features and finess to this.
+This post describes the basic concept of having a textarea where you can type code and have it display in a window next to it. To get this usefull in your project you will most likely add more features and finess to this.
 
-For example, a nice feature is to have a button that takes what is written in the textarea and urlencode it. This can when be added to the url as a query string, and then be entered in the textarea on page load. A great way to let users share code with just an url.
+For example, a nice feature is to have a button that takes what is written in the textarea and url-encode it. This can then be added to the url as a query string, and then be entered in the textarea on page load. A great way to let users share code with just an url.
 
 Have fun coding ✨
