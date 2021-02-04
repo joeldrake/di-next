@@ -67,7 +67,7 @@ It's a great way to set up a sandbox for your component library (or whatever) wh
   function update() {
     iframe.contentWindow.postMessage(textarea.value, '*');
   }
-  setTimeout(()=>update(),100);
+  setTimeout(()=>update(),500);
 </script>
 
 ## Lets build it
@@ -126,7 +126,7 @@ You can then post messages to the iframe and get it to render directly to its bo
 
   // initially trigger an update manually
   // to get already added code going
-  setTimeout(() => update(), 100);
+  setTimeout(() => update(), 500);
 </script>
 ```
 
