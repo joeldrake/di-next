@@ -1,9 +1,12 @@
 ---
 title: 'Silltårta'
+image:
+  url: '/assets/blog/silltarta.jpg'
+  width: 1200,
+  height: 536,
 excerpt: 'Bör räcka till ca 8-10 personer. Görs gärna en dag i förväg.'
 author: 'Joel Drake'
-date: '2021-01-28'
-tags: recept
+tags: recept,sill
 lang: sv
 ---
 
@@ -11,21 +14,24 @@ Bör räcka till ca 8-10 personer. Görs gärna en dag i förväg.
 
 ## Ingredienser
 
-```
-Botten
-200 g   Kavring (mörk)
-75 g    Smör
+#### Botten
 
-Fyllning
-4 st    Gelatinblad
-2 burkar (ca 200 g) Matjesillfileér
-1 st    Röd lök
-1 burk (250g)   Kesella
-3 dl    Gräddfil eller lätt crème fraiche
+|       |                |
+| ----- | -------------- |
+| 200 g | Kavring (mörk) |
+| 75 g  | Smör           |
 
-Svartpeppar
-1,5 dl  Gräslök
-```
+#### Fyllning
+
+|                     |                                   |
+| ------------------- | --------------------------------- |
+| 4 st                | Gelatinblad                       |
+| 2 burkar (ca 200 g) | Matjesillfileér                   |
+| 1 st                | Röd lök                           |
+| 1 burk (250g)       | Kesella                           |
+| 3 dl                | Gräddfil eller lätt crème fraiche |
+| 1,5 dl              | Gräslök                           |
+|                     | Svartpeppar                       |
 
 ## Steg
 
@@ -45,4 +51,6 @@ Svartpeppar
 
 8. Hacka/klipp gräslöken och strö över hela sillpajen. Ta bort formen och servera tårtan på fat.
 
-Pia
+<br />
+
+_Recept från Pia_

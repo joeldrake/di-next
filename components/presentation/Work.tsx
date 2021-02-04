@@ -4,7 +4,12 @@ const Work = () => {
   return (
     <div className={styles.Work} id="work">
       <div className={`siteWidth sectionPadding siteSidePadding invisibleSideScrolling`}>
-        <h2>Work 🛠</h2>
+        <h2>
+          Work{' '}
+          <span role="img" aria-label="Work">
+            🛠
+          </span>
+        </h2>
         <hr />
         <div className={styles.Work__boxes + ' animateUnderline'}>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>

@@ -4,14 +4,19 @@ const About = () => {
   return (
     <div className={styles.About} id="about">
       <div className="siteWidth sectionPadding siteSidePadding invisibleSideScrolling">
-        <h2>About 🐲</h2>
+        <h2>
+          About{' '}
+          <span role="img" aria-label="Dragon">
+            🐲
+          </span>
+        </h2>
         <hr />
 
         <p>
           Greetings,
           <br />I am a web developer focusing on web apps and user interfaces. I specialize in front
-          end, because that is what I enjoy the most. But I have experience and knowledge of setting
-          up full tech stacks.
+          end, because that is what I enjoy. But I have experience and knowledge of setting up full
+          tech stacks.
         </p>
         <p>
           I have been building websites since I was young. Was part of a startup a few years back,

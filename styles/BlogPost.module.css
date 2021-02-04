@@ -15,6 +15,15 @@
   letter-spacing: -2px;
 }
 
+@media screen and (max-width: 768px) {
+  .BlogPost {
+    padding-top: 4rem;
+  }
+  .BlogPost--no-image {
+    padding-top: 5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .BlogPost__title {
     font-size: 3rem;
@@ -35,7 +44,7 @@
 }
 .BlogPost__markdown h4 {
   line-height: 1;
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 0.5rem 0;
 }
 
 .BlogPost__markdown pre {
@@ -47,8 +56,18 @@
   display: none;
 }
 
-.BlogPost__markdown blockquote,
-.BlogPost--recept .BlogPost__markdown pre {
+.BlogPost__markdown table {
+  border-collapse: collapse;
+}
+.BlogPost__markdown th {
+  padding: 0 1rem;
+}
+.BlogPost__markdown td {
+  border: 1px solid #dadce0;
+  padding: 0.5rem 1rem;
+}
+
+.BlogPost__markdown blockquote {
   border-left: 5px solid var(--site-success);
   background-color: var(--site-success-lighter);
   margin: 0;

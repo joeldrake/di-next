@@ -1,33 +1,33 @@
 ---
 title: 'Ratatouille med lax och saffran'
+image:
+  url: '/assets/blog/ratatouille-med-lax-och-saffran.jpg'
+  width: 1200,
+  height: 700,
 author: 'Joel Drake'
-date: '2021-01-28'
 tags: recept
 lang: sv
 ---
 
 ## Ingredienser
 
-```
-400 g   Krossade tomater
-4 st   Vitlöksklyftor
-1 st   Rödlök
-1   Aubergine
-3 st   Paprikor (ej gröna)
-1 st   Citron
-Timjan
-Salt
-Peppar
-Balsamvinäger
-
-0.5 g   Saffran
-2 dl   Crème fraiche
-
-Lax
-Olivolja
-
-Ris
-```
+|       |                     |
+| ----- | ------------------- |
+| 400 g | Krossade tomater    |
+| 4 st  | Vitlöksklyftor      |
+| 1 st  | Rödlök              |
+| 1 st  | Aubergine           |
+| 3 st  | Paprikor (ej gröna) |
+| 1 st  | Citron              |
+|       | Timjan              |
+|       | Salt                |
+|       | Peppar              |
+|       | Balsamvinäger       |
+| 0.5 g | Saffran             |
+| 2 dl  | Crème fraiche       |
+|       | Lax                 |
+|       | Olivolja            |
+|       | Ris                 |
 
 ## Steg
 

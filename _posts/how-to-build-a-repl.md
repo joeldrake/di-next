@@ -11,17 +11,19 @@ tags: coding
 lang: en
 ---
 
-> **Disclaimer:**
-> This blog post is basically a retelling of a technique to build your own repl that I saw in this youtube-video https://www.youtube.com/watch?v=S3j1fLzC8_E<br>
-> Credit goes to Peter Allen and the Svelte Society.
+This is a simple and vanilla way to build a REPL that I saw in this youtube-video https://www.youtube.com/watch?v=S3j1fLzC8_E. Credit goes to Peter Allen and the Svelte Society.
 
-The concept is to have an iframe that you initiate with a srcdoc that has an addEventListener for messages, and a function that takes the content of these messages and puts in in the body of the iframe.
+## What is a REPL?
 
-You can then post messages to the iframe and get it to render directly to its body.
+A REPL (read eval print loop) is an common name for an interface where you have an input of some sort, where the user can enter code. And an output, where the entered code gets executed and displayed.
 
-```html
-<div class="repl">
-  <textarea id="code" oninput="update()"></textarea>
+It's a great way to set up a sandbox for your component library (or whatever) where the user can play and interact with components. It's a good complement to documentation or tutorials.
+
+### Demo
+
+<div class="repl-demo">
+  <textarea id="code" oninput="update()" style="min-height:100px"><h1>Hello 👋</h1>
+<p>I am a REPL</p></textarea>
   <iframe id="output"></iframe>
 </div>
 
@@ -29,7 +31,7 @@ You can then post messages to the iframe and get it to render directly to its bo
   const textarea = document.getElementById('code');
   const iframe = document.getElementById('output');
 
-  const srcdoc = html`
+  const srcdoc = `
     <!DOCTYPE html>
     <html>
       <head>
@@ -65,6 +67,66 @@ You can then post messages to the iframe and get it to render directly to its bo
   function update() {
     iframe.contentWindow.postMessage(textarea.value, '*');
   }
+  setTimeout(()=>update(),100);
+</script>
+
+## Lets build it
+
+The concept is to have an iframe that you initiate with a srcdoc that has an addEventListener for messages, and a function that takes the content of these messages and puts in in the body of the iframe.
+
+You can then post messages to the iframe and get it to render directly to its body.
+
+```html
+<div class="repl">
+  <textarea id="code" oninput="update()"></textarea>
+  <iframe id="output"></iframe>
+</div>
+
+<script>
+  const textarea = document.getElementById('code');
+  const iframe = document.getElementById('output');
+
+  const srcdoc = html`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script type="module">
+          function iframe_update(source) {
+            // Select all scripts found in body and
+            // execute them with import() to get scripts to work
+            const scripts = document.body.querySelectorAll('script');
+            if (scripts.length) {
+              scripts.forEach((script) => {
+                const blob = new Blob([script.innerHTML], { type: 'text/javascript' });
+                const url = URL.createObjectURL(blob);
+                import(url);
+              });
+            }
+
+            document.body.innerHTML = source;
+          }
+          window.addEventListener(
+            'message',
+            (e) => {
+              iframe_update(e.data);
+            },
+            false
+          );
+        <\/script>
+      </head>
+      <body></body>
+    </html>
+  `;
+
+  iframe.srcdoc = srcdoc;
+
+  function update() {
+    iframe.contentWindow.postMessage(textarea.value, '*');
+  }
+
+  // initially trigger an update manually
+  // to get already added code going
+  setTimeout(() => update(), 100);
 </script>
 ```
 
@@ -160,3 +222,11 @@ Add some flexbox to it to get the windows nicely sized.
   border: 2px solid black;
 }
 ```
+
+## Conclution
+
+This is the basic concept of having a textarea where you can type code and have it display in a window next to it. To get this usefull in your project you will most likely add more features and finess to this.
+
+For example, a nice feature is to have a button that takes what is written in the textarea and urlencode it. This can when be added to the url as a query string, and then be entered in the textarea on page load. A great way to let users share code with just an url.
+
+Have fun coding ✨

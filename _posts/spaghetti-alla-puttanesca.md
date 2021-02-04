@@ -1,8 +1,11 @@
 ---
 title: 'Spaghetti alla puttanesca'
 excerpt: 'Väldigt enkel rätt att laga. Fungerar lika bra till vardags och i matlåda som den gör till helgen. Servera med rödvin och parmesan så har du en festmåltid!'
+image:
+  url: '/assets/blog/spaghetti-alla-puttanesca.jpg'
+  width: 800,
+  height: 534,
 author: 'Joel Drake'
-date: '2021-01-28'
 tags: recept
 lang: sv
 ---
@@ -11,16 +14,16 @@ Väldigt enkel rätt att laga. Fungerar lika bra till vardags och i matlåda som
 
 ## Ingredienser
 
-```
-2 burkar    Plommontomater
-2.5 tsk    Sardellcrème
-0,5 dl    Olivolja
-0,5 st    Chili frukt
-1 burk    Kalamataoliver urkärnade
-2 msk    Kapris medelstora
-2 msk    Bladpersilja
-2 st    Vitlöksklyftor
-```
+|          |                          |
+| -------- | ------------------------ |
+| 2 burkar | Plommontomater           |
+| 2.5 tsk  | Sardellcrème             |
+| 0,5 dl   | Olivolja                 |
+| 0,5 st   | Chili frukt              |
+| 1 burk   | Kalamataoliver urkärnade |
+| 2 msk    | Kapris medelstora        |
+| 2 msk    | Bladpersilja             |
+| 2 st     | Vitlöksklyftor           |
 
 ## Steg
 
@@ -37,5 +40,9 @@ Väldigt enkel rätt att laga. Fungerar lika bra till vardags och i matlåda som
 6. Häll av vattnet och vänd ner spaghettin i såsen.
 
 7. Strö över persilja och servera.
+
+<br />
+
+_Recept från Zeta_
 
 https://www.zeta.nu/recept/spaghetti-alla-puttanesca-2/

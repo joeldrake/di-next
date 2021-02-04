@@ -13,12 +13,12 @@ God och nyttig sylt! Chiafrön passar perfekt tillsammans med hallon och gör ha
 
 ## Ingredienser
 
-```
-225 g   frysta hallon
-3 msk   chiafrön
-1 msk   flytande kokosnektar (eller annat sötningsmedel)
-1 tsk   vaniljpulver
-```
+|       |                                                  |
+| ----- | ------------------------------------------------ |
+| 225 g | frysta hallon                                    |
+| 3 msk | chiafrön                                         |
+| 1 msk | flytande kokosnektar (eller annat sötningsmedel) |
+| 1 tsk | vaniljpulver                                     |
 
 ## Steg
 

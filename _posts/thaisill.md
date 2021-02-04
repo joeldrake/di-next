@@ -1,24 +1,27 @@
 ---
 title: 'Thaisill'
+image:
+  url: '/assets/blog/thaisill.jpg'
+  width: 1200,
+  height: 1400,
 author: 'Joel Drake'
-date: '2021-01-28'
-tags: recept
+tags: recept,sill
 lang: sv
 ---
 
 ## Ingredienser
 
-```
-420 g   Inläggningssill i burk
-1 dl   Ättiksprit (12%)
-2 dl   Socker
-1 dl   Vatten
-1 st   Vitlöksklyftor
-30 g   Ingefära färsk
-1 st   Chili röd
-1 bit   Citrongräs
-1 knippe   Koriander färsk
-```
+|          |                        |
+| -------- | ---------------------- |
+| 420 g    | Inläggningssill i burk |
+| 1 dl     | Ättiksprit (12%)       |
+| 2 dl     | Socker                 |
+| 1 dl     | Vatten                 |
+| 1 st     | Vitlöksklyftor         |
+| 30 g     | Ingefära färsk         |
+| 1 st     | Chili röd              |
+| 1 bit    | Citrongräs             |
+| 1 knippe | Koriander färsk        |
 
 ## Steg
 
@@ -30,5 +33,6 @@ lang: sv
 
 4. Garnera med koriander vid servering.
 
-Måns thaisill
+_Måns thaisill_
+
 https://www.dn.se/mat-dryck/recept/mans-thaisill/

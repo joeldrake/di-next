@@ -1,8 +1,11 @@
 ---
 title: 'Vegetarisk lasagne'
 excerpt: 'Det här är en god italiensk lasagne med mycket smak och utan kött.'
+image:
+  url: '/assets/blog/lasagne.jpg'
+  width: 800,
+  height: 450,
 author: 'Joel Drake'
-date: '2021-01-28'
 tags: recept
 lang: sv
 ---
@@ -11,28 +14,31 @@ Det här är en god italiensk lasagne med mycket smak och utan kött.
 
 ## Ingredienser
 
-```
-Tomatsås
-	2 st	Gul lök
-	4 st	Vitlöksklyftor
-	2 msk	Olivolja
-	2 frp.	Krossade tomater
-	2 tsk	Oregano eller basilika
-	1 tsk	Honung
+#### Tomatsås
 
-	Salt och peppar
+|        |                        |
+| ------ | ---------------------- |
+| 2 st   | Gul lök                |
+| 4 st   | Vitlöksklyftor         |
+| 2 msk  | Olivolja               |
+| 2 frp. | Krossade tomater       |
+| 2 tsk  | Oregano eller basilika |
+| 1 tsk  | Honung                 |
+|        | Salt och peppar        |
 
-2 stora	Aubergin
-2 tsk	Salt
-2 påsar	Mozzarella
-1 kruka	Basilika
-12 st	Lasagneplattor färska
-2 dl	Mjölk
-50 g	Parmesan
+#### Lasagne
 
-Gott bröd
-Grönsallad
-```
+|         |                       |
+| ------- | --------------------- |
+| 2 stora | Aubergin              |
+| 2 tsk   | Salt                  |
+| 2 påsar | Mozzarella            |
+| 1 kruka | Basilika              |
+| 12 st   | Lasagneplattor färska |
+| 2 dl    | Mjölk                 |
+| 50 g    | Parmesan              |
+|         | Gott bröd             |
+|         | Grönsallad            |
 
 ## Steg
 

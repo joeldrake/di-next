@@ -4,7 +4,12 @@ const Contact = () => {
   return (
     <div className={styles.Contact} id="contact">
       <div className={'siteWidth sectionPadding siteSidePadding invisibleSideScrolling'}>
-        <h2>Contact 📨</h2>
+        <h2>
+          Contact{' '}
+          <span role="img" aria-label="Contact">
+            📨
+          </span>
+        </h2>
         <hr />
         <p>Send me an email or a message on social media if you want to get in touch with me.</p>
 
