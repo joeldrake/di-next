@@ -48,13 +48,13 @@
 }
 
 .BlogPost__markdown blockquote,
-.BlogPost--recipe .BlogPost__markdown pre {
+.BlogPost--recept .BlogPost__markdown pre {
   border-left: 5px solid var(--site-success);
   background-color: var(--site-success-lighter);
   margin: 0;
   padding: 0.1rem 1rem;
 }
 
-.BlogPost--recipe .BlogPost__markdown pre {
+.BlogPost--recept .BlogPost__markdown pre {
   padding: 1rem;
 }

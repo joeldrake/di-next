@@ -21,6 +21,7 @@ type Props = {
 };
 
 const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
+
   const tagsArray = tags ? tags.split(',') : null;
 
   return (
@@ -49,8 +50,7 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
       {(tagsArray || lang) && (
         <div className={cx('PostPreview__tags')}>
           {lang && <div className={cx('PostPreview__tag')}>{lang === 'sv' ? `🇸🇪` : `🇬🇧`}</div>}
-          {tagsArray &&
-            tagsArray.map((tag, i) => (
+          {tagsArray && tagsArray.map((tag, i) => (
               <div key={i} className={cx('PostPreview__tag')}>
                 {tag}
               </div>

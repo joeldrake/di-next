@@ -73,6 +73,8 @@ export const getStaticProps = async () => {
   const allPosts = getAllPosts(['title', 'date', 'slug', 'image', 'tags', 'lang']);
 
   return {
-    props: { allPosts },
+    props: {
+      allPosts,
+    },
   };
 };

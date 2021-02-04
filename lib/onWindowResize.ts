@@ -1,4 +1,4 @@
-import { debounce } from './debounce.ts';
+import { debounce } from './debounce';
 
 let callbacks: any = [];
 
@@ -7,10 +7,10 @@ const onResize = debounce((evt: any) => {
 }, 50);
 
 function registerListener() {
-  window.addEventListener('resize', onResize, { passive: true });
+  window.addEventListener('resize', onResize);
 }
 function removeListener() {
-  window.removeEventListener('resize', onResize, { passive: true });
+  window.removeEventListener('resize', onResize);
 }
 
 export function onWindowResize(fn: any) {

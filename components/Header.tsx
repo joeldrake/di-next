@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { onWindowResize } from '@/lib/onWindowResize.ts';
+import { onWindowResize } from '@/lib/onWindowResize';
 
 import styles from '@/styles/Header.module.css';
 import classNames from 'classnames/bind';
@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const Header = () => {
   const router: any = useRouter();
-  const [windowSize,setWindowSize] = useState(0);
+  const [windowSize, setWindowSize] = useState(0);
   const { route } = router;
 
   useEffect(() => {
@@ -49,10 +49,10 @@ const Header = () => {
   };
 
   const updateWindowSize = () => {
-    if(typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    setWindowSize(vw)
-  }
+    setWindowSize(vw);
+  };
 
   const onClickNavLink = (e: any) => {
     if (route != '/') return;

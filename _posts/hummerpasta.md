@@ -45,6 +45,3 @@ Peppar
 
 6. Blanda sås och pasta. Tillsätt lite kokvatten om det verkar för torrt. Häll upp pastan i djupa tallrikar. Garnera med persilja och citroncest. Toppa med varsin hummerklo.
 
-```
-
-```

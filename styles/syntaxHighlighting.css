@@ -1,29 +1,6 @@
 /*
 
-Night Owl for highlight.js (c) Carl Baxter <carl@cbax.tech>
-
-An adaptation of Sarah Drasner's Night Owl VS Code Theme 
-https://github.com/sdras/night-owl-vscode-theme 
-
-Copyright (c) 2018 Sarah Drasner
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
 
@@ -31,152 +8,92 @@ SOFTWARE.
   display: block;
   overflow-x: auto;
   padding: 1em;
-  background: #011627;
-  color: #d6deeb;
+  color: #333;
+  background: var(--color-off-white);
 }
 
-/* General Purpose */
-.hljs-keyword {
-  color: #c792ea;
+.hljs-comment,
+.hljs-quote {
+  color: #998;
   font-style: italic;
 }
-.hljs-built_in {
-  color: #addb67;
-  font-style: italic;
-}
-.hljs-type {
-  color: #82aaff;
-}
-.hljs-literal {
-  color: #ff5874;
-}
-.hljs-number {
-  color: #F78C6C;
-}
-.hljs-regexp {
-  color: #5ca7e4;
-}
-.hljs-string {
-  color: #ecc48d;
-}
+
+.hljs-keyword,
+.hljs-selector-tag,
 .hljs-subst {
-  color: #d3423e;
-}
-.hljs-symbol {
-  color: #82aaff;
-}
-.hljs-class {
-  color: #ffcb8b;
-}
-.hljs-function {
-  color: #82AAFF;
-}
-.hljs-title {
-  color: #DCDCAA;
-  font-style: italic;
-}
-.hljs-params {
-  color: #7fdbca;
-}
-
-/* Meta */
-.hljs-comment {
-  color: #637777;
-  font-style: italic;
-}
-.hljs-doctag {
-  color: #7fdbca;
-}
-.hljs-meta {
-  color: #82aaff;
-}
-.hljs-meta-keyword {
-  color: #82aaff;
-}
-.hljs-meta-string {
-  color: #ecc48d;
-}
-
-/* Tags, attributes, config */
-.hljs-section {
-  color: #82b1ff;
-}
-.hljs-tag,
-.hljs-name,
-.hljs-builtin-name {
-  color: #7fdbca;
-}
-.hljs-attr {
-  color: #7fdbca;
-}
-.hljs-attribute {
-  color: #80cbc4;
-}
-.hljs-variable {
-  color: #addb67;
-}
-
-/* Markup */
-.hljs-bullet {
-  color: #d9f5dd;
-}
-.hljs-code {
-  color: #80CBC4;
-}
-.hljs-emphasis {
-  color: #c792ea;
-  font-style: italic;
-}
-.hljs-strong {
-  color: #addb67;
+  color: #333;
   font-weight: bold;
 }
-.hljs-formula {
-  color: #c792ea;
-}
-.hljs-link {
-  color: #ff869a;
-}
-.hljs-quote {
-  color: #697098;
-  font-style: italic;
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
 }
 
-/* CSS */
-.hljs-selector-tag {
-  color: #ff6363;
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
 }
 
+.hljs-title,
+.hljs-section,
 .hljs-selector-id {
-  color: #fad430;
+  color: #900;
+  font-weight: bold;
 }
 
-.hljs-selector-class {
-  color: #addb67;
-  font-style: italic;
+.hljs-subst {
+  font-weight: normal;
 }
 
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #c792ea;
-  font-style: italic;
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
 }
 
-/* Templates */
-.hljs-template-tag {
-  color: #c792ea;
-}
-.hljs-template-variable {
-  color: #addb67;
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
 }
 
-/* diff */
-.hljs-addition {
-  color: #addb67ff;
-  font-style: italic;
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
 }
 
 .hljs-deletion {
-  color: #EF535090;
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
   font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }

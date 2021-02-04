@@ -15,6 +15,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .BlogStart__top {
+    padding-bottom: 3rem;
+  }
+}
+
 .BlogStart__headline {
   font-size: 5rem;
   line-height: 4.2rem;
@@ -37,7 +43,6 @@
 @media screen and (max-width: 450px) {
   .BlogStart__top {
     min-height: 55vw;
-    padding-bottom: 3rem;
   }
   .BlogStart__headline {
     font-size: 15vw;

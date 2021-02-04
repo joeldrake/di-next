@@ -27,8 +27,10 @@ const BlogPost = ({ post, preview }: Props) => {
   const { image, tags } = post;
   const modifiers: any = { 'BlogPost--no-image': !image };
 
-  if (tags) {
-    tags.forEach((tag) => {
+  const tagsArray = tags ? tags.split(',') : null;
+
+  if (tagsArray) {
+    tagsArray.forEach((tag) => {
       modifiers[`BlogPost--${tag}`] = true;
     });
   }
@@ -99,15 +101,13 @@ export async function getStaticProps({ params }: Params) {
     'tags',
     'lang',
   ]);
-  const content = await markdownToHtml(post.content || '');
-  const tags = post.tags ? post.tags.split(',') : null;
+  const content = typeof post.content === 'string' ? await markdownToHtml(post.content) : '';
 
   return {
     props: {
       post: {
         ...post,
         content,
-        tags,
       },
     },
   };
