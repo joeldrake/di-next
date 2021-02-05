@@ -104,13 +104,19 @@ const Header = () => {
     return route === '/blog/[slug]' && windowSize <= 768;
   };
 
+  const handleBackButton = (e: any) => {
+    if (typeof window === 'undefined') return;
+    e.preventDefault();
+    router.back();
+  };
+
   return (
     <header className={cx('Header')} id="header">
       <div className={cx('Header__inner', 'siteWidth', 'siteSidePadding')}>
         <div className={cx('Header__logo', { animateUnderline: !isBlogPost() })}>
           {isBlogPost() ? (
             <Link href="/blog">
-              <a className={cx('Header__backButton')}>
+              <a className={cx('Header__backButton')} onClick={handleBackButton}>
                 <img src="/images/arrow-left.svg" alt="Back" />
               </a>
             </Link>

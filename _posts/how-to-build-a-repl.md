@@ -93,7 +93,7 @@ Here are some code snippets that might help you on your way.
 
 #### Prettify
 
-If you have prettier version 2.0.5 or later installed you can use it's parser on standalone strings.
+If you have prettier version 2.0.5 or later installed you can use it's parser on standalone strings. You can use this with a button to prettify the code in the textarea.
 
 ```javascript
 const prettier = require('prettier/standalone');
@@ -116,7 +116,7 @@ const prettifyCode = () => {
 
 #### Tab
 
-One think you notice when trying to code in a textarea is that the behaviour if the tab key works different than in a texteditor...
+One thing you notice when trying to code in a textarea is that the behaviour if the tab key works different than in a texteditor...
 
 Here is a snippet you can add to a keydown listener on your textarea to get the expected behaviour.
 

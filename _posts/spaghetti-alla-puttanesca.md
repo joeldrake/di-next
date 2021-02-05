@@ -3,8 +3,8 @@ title: 'Spaghetti alla puttanesca'
 excerpt: 'Väldigt enkel rätt att laga. Fungerar lika bra till vardags och i matlåda som den gör till helgen. Servera med rödvin och parmesan så har du en festmåltid!'
 image:
   url: '/assets/blog/spaghetti-alla-puttanesca.jpg'
-  width: 800,
-  height: 534,
+  width: 1200,
+  height: 700,
 author: 'Joel Drake'
 tags: recept
 lang: sv

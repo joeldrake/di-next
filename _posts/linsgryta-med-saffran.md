@@ -48,4 +48,6 @@ lang: sv
 
 7. Ät med bröd, ris, eller som soppa om det är utspätt med mer vatten. Toppa med creme fraiche.
 
-recept från: John
+<br />
+
+_Recept från John_

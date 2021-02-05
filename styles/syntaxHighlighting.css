@@ -7,10 +7,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
+  padding: 1rem;
   color: #333;
   background: #f7f7f7;
   border: 1px solid #dadce0;
+}
+
+@media screen and (max-width: 768px) {
+  .hljs {
+    padding: 0.5rem;
+  }
 }
 
 .hljs-comment,

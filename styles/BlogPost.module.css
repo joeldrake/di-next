@@ -77,3 +77,9 @@
 .BlogPost--recept .BlogPost__markdown pre {
   padding: 1rem;
 }
+
+.BlogPost--recept p,
+.BlogPost--recept li,
+.BlogPost--recept table {
+  font-size: 1.125rem; /* 18px */
+}
