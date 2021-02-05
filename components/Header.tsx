@@ -117,7 +117,7 @@ const Header = () => {
           {isBlogPost() ? (
             <Link href="/blog">
               <a className={cx('Header__backButton')} onClick={handleBackButton}>
-                <img src="/images/arrow-left.svg" alt="Back" />
+                <img src="/images/arrow-left.svg" width="24" height="24" alt="Back" />
               </a>
             </Link>
           ) : (
@@ -140,11 +140,15 @@ const Header = () => {
         >
           <img
             src="/images/menu.svg"
+            width="24"
+            height="24"
             className={cx('Header__navOpen', 'Header__navButtonPreventClickStop')}
             alt="Open navigation"
           />
           <img
             src="/images/close.svg"
+            width="24"
+            height="24"
             className={cx('Header__navClose', 'Header__navButtonPreventClickStop')}
             alt="Close navigation"
           />
