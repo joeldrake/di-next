@@ -11,13 +11,13 @@ tags: coding
 lang: en
 ---
 
-This is a simple and vanilla way to build a REPL that I saw in this youtube-video https://www.youtube.com/watch?v=S3j1fLzC8_E. Credit goes to Peter Allen and the Svelte Society.
+This is a simple way to build a vanilla REPL, that I saw in this youtube-video https://www.youtube.com/watch?v=S3j1fLzC8_E. Credit goes to Peter Allen and the Svelte Society.
 
 ## What is a REPL?
 
 A REPL (read eval print loop) is an common name for an interface where you have an input of some sort, where the user can enter code. And an output, where the entered code gets executed and displayed.
 
-It's a great way to set up a sandbox for your component library (or whatever) where the user can play and interact with components. It's a good complement to documentation or tutorials.
+It's a great way to set up a sandbox for your component library (or whatever) where the user can test, play and interact with components. It's a good complement to documentation and tutorials.
 
 ### Demo
 
@@ -83,9 +83,9 @@ You can then post messages to the iframe and get it to render directly to its bo
 </script>
 ```
 
-This is the basic concept of having a textarea where you can type code and have it display in a window next to it.
+This is the basic concept you can have as a starting point.
 
-To get this usefull in your project you will most likely add more features and finess to this.
+To get this usefull in your project you will most likely add more features and finess to it.
 
 ## Additional snippets
 
@@ -176,10 +176,10 @@ Add some flexbox to it to get the windows nicely sized.
 }
 ```
 
-## Conclusion
+## Summary
 
-This is the basic concept of having a textarea where you can type code and have it display in a window next to it. To get this usefull in your project you will most likely add more features and finess to this.
+Use this blog post as a starting point for your own repl. Copy the code you like and refactor it after your needs.
 
-For example, a nice feature is to have a button that takes what is written in the textarea and urlencode it. This can when be added to the url as a query string, and then be entered in the textarea on page load. A great way to let users share code with just an url.
+A nice feature to add would be a button that takes what is written in the textarea and url-encode it. This can then be added to the url as a query string, and then be entered in the textarea on page load. This is great way to let users share code with just an url.
 
 Have fun coding ✨
