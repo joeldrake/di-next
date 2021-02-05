@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--color-background-primary);
-  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   word-wrap: break-word;
   font-weight: normal;
   font-size: 16px;
