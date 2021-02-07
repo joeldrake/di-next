@@ -14,7 +14,7 @@ lang: sv
 | Morot             | 2 st          |
 | Aubergine         | 1st           |
 | Portabellosvampar | 2/3 st        |
-| Vitlök            | 2 klyftor     |
+| Vitlök            | 3 klyftor     |
 | Gul lök           | 1st           |
 | Balsamvinäger     | 2 msk         |
 | Grönsaksbuljong   | 1 tärning     |
@@ -27,7 +27,7 @@ lang: sv
 
 1. Skölj och hacka **aubergine** och **portabellosvampar**. Stek sedan i rapsolja tills ingredienserna har vattnat av sig.
 
-2. Hacka **gul lök** och **vitlök** och lägg ner i pannan. Stek tills löken mjuknat något.
+2. Hacka, **morot**, **gul lök** och **vitlök** och lägg ner i pannan. Stek tills morätterna mjuknat något.
 
 3. Koka belugalinser i separat kastrull.
 
