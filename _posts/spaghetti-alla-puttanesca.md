@@ -24,6 +24,8 @@ Väldigt enkel rätt att laga. Fungerar lika bra till vardags och i matlåda som
 | 2 msk    | Kapris medelstora        |
 | 2 msk    | Bladpersilja             |
 | 2 st     | Vitlöksklyftor           |
+| 400 g    | Spagetti                 |
+
 
 ## Steg
 
