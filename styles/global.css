@@ -19,6 +19,10 @@ body {
   scroll-behavior: smooth;
 }
 
+code {
+  word-wrap: normal;
+}
+
 * {
   box-sizing: border-box;
 }

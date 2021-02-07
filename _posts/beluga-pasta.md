@@ -9,7 +9,9 @@ lang: sv
 |                   |               |
 | ----------------- | ------------- |
 | Krossade tomater  | 1 eller 2 pkt |
-| Belugalinser      |
+| Belugalinser      | 2 dl          |
+| Buffel mozzarella | 2 st          |
+| Morot             | 2 st          |
 | Aubergine         | 1st           |
 | Portabellosvampar | 2/3 st        |
 | Vitlök            | 2 klyftor     |
@@ -19,7 +21,7 @@ lang: sv
 | Salt              |
 | Peppar            |
 | Rapsolja          |
-| Pasta             | 300 g         |
+| Pasta             | 400 g         |
 
 ## Steg
 
@@ -34,5 +36,7 @@ lang: sv
 5. Lägg i belugalinserna i pannan när de kokat klart.
 
 6. Koka pastan al dente och vänd ner i pannan/grytan.
+
+7. Lägg upp och toppa varje portion med en halv buffel mozzarella.
 
 <br>
