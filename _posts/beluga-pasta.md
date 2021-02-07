@@ -30,7 +30,7 @@ lang: sv
 
 3. Koka belugalinser i separat kastrull.
 
-4. Häll i **aubergine**, ** portabellosvamp**, **krossad tomat**, **balsamvinäger**, **buljongtärning** samt **salt** och **peppar** i grytan. Låt koka i minst 30 min
+4. Häll i **aubergine**, **portabellosvamp**, **krossad tomat**, **balsamvinäger**, **buljongtärning** samt **salt** och **peppar** i grytan. Låt koka i minst 30 min
 
 5. Lägg i belugalinserna i grytan när de kokat klart.
 
