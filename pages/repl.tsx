@@ -17,7 +17,10 @@ const Repl = () => {
         <head>
           <script type="module">
             function iframe_update(source) {
-              // Select all scripts found in body and execute them with import() to get scripts to work
+              document.body.innerHTML = source;
+
+              // Select all scripts found in body and
+              // execute them with import() to get scripts to work
               const scripts = document.body.querySelectorAll('script');
               if (scripts.length) {
                 scripts.forEach((script) => {
@@ -25,9 +28,7 @@ const Repl = () => {
                   const url = URL.createObjectURL(blob);
                   import(url);
                 });
-              }
-  
-              document.body.innerHTML = source;
+              }            
             }
             window.addEventListener(
               'message',

@@ -45,6 +45,8 @@ You can then post messages to the iframe and get it to render directly to its bo
       <head>
         <script type="module">
           function iframe_update(source) {
+            document.body.innerHTML = source;
+
             // Select all scripts found in body and
             // execute them with import() to get scripts to work
             const scripts = document.body.querySelectorAll('script');
@@ -55,8 +57,6 @@ You can then post messages to the iframe and get it to render directly to its bo
                 import(url);
               });
             }
-
-            document.body.innerHTML = source;
           }
           window.addEventListener(
             'message',

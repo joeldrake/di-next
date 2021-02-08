@@ -31,7 +31,7 @@ Väldigt enkel rätt att laga. Blir vegansk om man väljer pasta utan ägg (vilk
 
 1. Sätt ugnen på 225 grader.
 
-2. Skölj körsbärstomater och bönor. Dela tomaterna i halvor. Hacka vitlök och dra loss rosmarinbladen från kvistarna. Lägg alltihop i en ugnsfast form, och häll över olja, balsamvinäger, socker, salt och peppar. Sätt in formen i ugnen.
+2. Skölj körsbärstomater och bönor. Dela tomaterna i halvor. Hacka vitlök och dra loss rosmarinbladen från kvistarna. Lägg alltihop i en ugnsfast form, och häll över olja, balsamvinäger, salt och peppar. Sätt in formen i ugnen.
 
 3. Koka under tiden pasta enligt anvisning på paketet.
 

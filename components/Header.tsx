@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { onWindowResize } from '@/lib/onWindowResize';
+import { useEffect } from 'react';
 
 import styles from '@/styles/Header.module.css';
 import classNames from 'classnames/bind';
@@ -9,7 +8,6 @@ const cx = classNames.bind(styles);
 
 const Header = () => {
   const router: any = useRouter();
-  const [windowSize, setWindowSize] = useState(0);
   const { route } = router;
 
   useEffect(() => {
@@ -20,13 +18,6 @@ const Header = () => {
       const target = document.querySelector('#header');
       if (target) observer.observe(target);
     }
-    const unWindowResize = onWindowResize(updateWindowSize);
-    updateWindowSize();
-
-    return () => {
-      // run on unmount
-      unWindowResize();
-    };
   }, []);
 
   const callback = (entries: any) => {
@@ -46,12 +37,6 @@ const Header = () => {
       const cleanUrl = url.substring(0, url.indexOf('#'));
       window.history.replaceState({}, document.title, cleanUrl);
     }
-  };
-
-  const updateWindowSize = () => {
-    if (typeof window === 'undefined') return;
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    setWindowSize(vw);
   };
 
   const onClickNavLink = (e: any) => {
@@ -101,7 +86,7 @@ const Header = () => {
   };
 
   const isBlogPost = () => {
-    return route === '/blog/[slug]' && windowSize <= 768;
+    return route === '/blog/[slug]';
   };
 
   const handleBackButton = (e: any) => {

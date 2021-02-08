@@ -6,21 +6,21 @@ lang: sv
 
 ## Ingredienser
 
-|                              |               |
-| ---------------------------- | ------------- |
-| Krossade tomater             | 1 paket |
-| Belugalinser                 | 2 dl          |
-| Buffelmozzarella            | 2 st          |
-| Morot                        | 2 st          |
-| Aubergine                    | 1 st          |
-| Portabellosvampar            | 3/4 st        |
-| Vitlök                       | 3 klyftor     |
-| Gul lök                      | 1st           |
-| Balsamvinäger                | 2 msk         |
-| Grönsaks- eller umamibuljong | 1 tärning     |
-| Salt och peppar              ||
+|                              |           |
+| ---------------------------- | --------- |
+| Krossade tomater             | 1 paket   |
+| Belugalinser                 | 2 dl      |
+| Buffelmozzarella             | 2 st      |
+| Morot                        | 2 st      |
+| Aubergine                    | 1 st      |
+| Portabellosvampar            | 3/4 st    |
+| Vitlök                       | 3 klyftor |
+| Gul lök                      | 1st       |
+| Balsamvinäger                | 2 msk     |
+| Grönsaks- eller umamibuljong | 1 tärning |
+| Salt och peppar              |           |
 | Rapsolja                     |
-| Pasta                        | 400 g         |
+| Pasta                        | 400 g     |
 
 ## Steg
 
