@@ -63,7 +63,7 @@
   padding: 0 1rem;
 }
 .BlogPost__markdown td {
-  border: 1px solid #dadce0;
+  border: 1px solid var(--border);
   padding: 0.5rem 1rem;
 }
 

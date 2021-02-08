@@ -30,4 +30,8 @@
   --site-highlight-purple: #f81ce5;
   --site-highlight-magenta: #eb367f;
   --site-highlight-pink: #ff0080;
+
+  --border: #dadce0;
+  --focus-border: var(--site-success);
+  --focus-shadow: 0 0 0 1px var(--site-success);
 }

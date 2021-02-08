@@ -60,7 +60,10 @@ const BlogPost = ({ post, preview }: Props) => {
             )}
 
             <div className={'siteWidth siteSidePadding'}>
-              <h1 className={cx('BlogPost__title')}>{post.title}</h1>
+              <h1
+                className={cx('BlogPost__title')}
+                dangerouslySetInnerHTML={{ __html: post.title }}
+              />
 
               {post.date && (
                 <p className={cx('BlogPost__subtitle')}>

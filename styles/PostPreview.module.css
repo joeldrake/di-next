@@ -35,11 +35,3 @@
 .PostPreview__tags {
   margin-top: 1.5rem;
 }
-
-.PostPreview__tag {
-  display: inline-block;
-  margin: 0 0.5rem 0.5rem 0;
-  background: #f7f7f7;
-  border: 1px solid #dadce0;
-  padding: 0.25rem 0.5rem;
-}

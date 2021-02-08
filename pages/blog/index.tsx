@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { getAllPosts } from '@/lib/api';
 import Head from 'next/head';
 import Post from '@/types/post';
@@ -7,6 +9,8 @@ import Contact from '@/components/presentation/Contact';
 
 import styles from '@/styles/BlogStart.module.css';
 import classNames from 'classnames/bind';
+import Input from '@/components/Input';
+
 const cx = classNames.bind(styles);
 
 type Props = {
@@ -14,8 +18,23 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
+  const [filter, setFilter] = useState('');
+  const handleFilterChange = (e: any) => {
+    setFilter(e.target.value);
+  };
+
+  allPosts = allPosts.filter((post) => {
+    if (post.hidden) return false;
+
+    if (filter && filter.length) {
+      return post.title.toUpperCase().includes(filter.toUpperCase());
+    }
+
+    return true;
+  });
+
   const heroPost = allPosts[0];
-  const posts = allPosts.slice(1).filter((post) => !post.hidden);
+  const posts = allPosts.slice(1);
 
   return (
     <>
@@ -32,6 +51,8 @@ const Index = ({ allPosts }: Props) => {
             A collection of different things I want to share with the internet
           </div>
         </div>
+
+        <Input onChange={handleFilterChange} value={filter} placeholder="Filtrera" />
 
         {heroPost && (
           <div className={cx('BlogStart__heroPost')}>
@@ -59,6 +80,18 @@ const Index = ({ allPosts }: Props) => {
                 lang={post.lang}
               />
             ))}
+          </div>
+        )}
+        {!heroPost && !posts.length && (
+          <div className={cx('BlogStart__noPosts')}>
+            <span
+              role="img"
+              aria-label={'No posts found emoji'}
+              className={cx('BlogStart__noPosts-emoji')}
+            >
+              🤷‍♂️
+            </span>
+            <div>No posts found</div>
           </div>
         )}
       </div>

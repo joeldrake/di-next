@@ -5,6 +5,7 @@ const cx = classNames.bind(styles);
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Tag from '@/components/Tag';
 
 type Props = {
   title: string;
@@ -46,7 +47,7 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
             />
           )}
 
-          <h2 className={cx('PostPreview__headline')}>{title}</h2>
+          <h2 className={cx('PostPreview__headline')} dangerouslySetInnerHTML={{ __html: title }} />
         </a>
       </Link>
       {date && (
@@ -56,13 +57,8 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
       )}
       {(tagsArray || lang) && (
         <div className={cx('PostPreview__tags')}>
-          {lang && <div className={cx('PostPreview__tag')}>{langTag(lang)}</div>}
-          {tagsArray &&
-            tagsArray.map((tag, i) => (
-              <div key={i} className={cx('PostPreview__tag')}>
-                {tag}
-              </div>
-            ))}
+          {lang && <Tag>{langTag(lang)}</Tag>}
+          {tagsArray && tagsArray.map((tag, i) => <Tag key={i}>{tag}</Tag>)}
         </div>
       )}
     </div>

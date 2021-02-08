@@ -48,3 +48,17 @@
     font-size: 15vw;
   }
 }
+
+.BlogStart__filter {
+  width: 100%;
+}
+
+.BlogStart__noPosts {
+  padding: 2rem;
+  color: var(--border);
+  text-align: center;
+}
+
+.BlogStart__noPosts-emoji {
+  font-size: 3rem;
+}

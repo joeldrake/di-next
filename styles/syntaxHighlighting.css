@@ -10,7 +10,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   padding: 1rem;
   color: #333;
   background: #f7f7f7;
-  border: 1px solid #dadce0;
+  border: 1px solid var(--border);
 }
 
 @media screen and (max-width: 768px) {

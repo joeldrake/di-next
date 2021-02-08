@@ -1,3 +1,4 @@
+import Tag from '@/components/Tag';
 import styles from '@/styles/Work.module.css';
 
 const Work = () => {
@@ -23,12 +24,12 @@ const Work = () => {
               <a href="https://retailonly.se">retailonly.se</a>
             </p>
             <div className={styles.Work__tags}>
-              <div className={styles.Work__tag}>Vue</div>
-              <div className={styles.Work__tag}>Svelte</div>
-              <div className={styles.Work__tag}>Web components</div>
-              <div className={styles.Work__tag}>GraphQL</div>
-              <div className={styles.Work__tag}>GitLab</div>
-              <div className={styles.Work__tag}>Jira</div>
+              <Tag>Vue</Tag>
+              <Tag>Svelte</Tag>
+              <Tag>Web components</Tag>
+              <Tag>GraphQL</Tag>
+              <Tag>GitLab</Tag>
+              <Tag>Jira</Tag>
             </div>
           </div>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
@@ -42,11 +43,11 @@ const Work = () => {
               <a href="https://infoping.se">infoping.se</a>
             </p>
             <div className={styles.Work__tags}>
-              <div className={styles.Work__tag}>React</div>
-              <div className={styles.Work__tag}>Node.js</div>
-              <div className={styles.Work__tag}>PHP</div>
-              <div className={styles.Work__tag}>Linux</div>
-              <div className={styles.Work__tag}>Github</div>
+              <Tag>React</Tag>
+              <Tag>Node.js</Tag>
+              <Tag>PHP</Tag>
+              <Tag>Linux</Tag>
+              <Tag>Github</Tag>
             </div>
           </div>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
@@ -60,11 +61,11 @@ const Work = () => {
               <a href="https://ett.se.se">ett.se</a>
             </p>
             <div className={styles.Work__tags}>
-              <div className={styles.Work__tag}>React</div>
-              <div className={styles.Work__tag}>Node.js</div>
-              <div className={styles.Work__tag}>PHP</div>
-              <div className={styles.Work__tag}>Windows Server</div>
-              <div className={styles.Work__tag}>Linux</div>
+              <Tag>React</Tag>
+              <Tag>Node.js</Tag>
+              <Tag>PHP</Tag>
+              <Tag>Windows Server</Tag>
+              <Tag>Linux</Tag>
             </div>
           </div>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
@@ -74,10 +75,10 @@ const Work = () => {
               Scandinavia.
             </p>
             <div className={styles.Work__tags}>
-              <div className={styles.Work__tag}>IT support</div>
-              <div className={styles.Work__tag}>FirstClass</div>
-              <div className={styles.Work__tag}>SMTP</div>
-              <div className={styles.Work__tag}>Server maintenance</div>
+              <Tag>IT support</Tag>
+              <Tag>FirstClass</Tag>
+              <Tag>SMTP</Tag>
+              <Tag>Server maintenance</Tag>
             </div>
           </div>
 
