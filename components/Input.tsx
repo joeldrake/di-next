@@ -1,3 +1,5 @@
+import { isIos } from '@/lib/browser';
+
 import styles from '@/styles/Input.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
@@ -10,6 +12,7 @@ type Props = {
 
 const Input = ({ onChange, value, placeholder }: Props) => {
   const handleFocus = (e: any) => {
+    if (isIos()) return;
     window.scrollTo({
       top: e.target.offsetTop - 16,
       behavior: 'smooth',
