@@ -23,18 +23,20 @@ const Index = ({ allPosts }: Props) => {
     setFilter(e.target.value);
   };
 
+  const hasFilter = filter && filter.length;
+
   allPosts = allPosts.filter((post) => {
     if (post.hidden) return false;
 
-    if (filter && filter.length) {
+    if (hasFilter) {
       return post.title.toUpperCase().includes(filter.toUpperCase());
     }
 
     return true;
   });
 
-  const heroPost = allPosts[0];
-  const posts = allPosts.slice(1);
+  const heroPost = hasFilter ? null : allPosts[0];
+  const posts = hasFilter ? allPosts : allPosts.slice(1);
 
   return (
     <>
@@ -48,11 +50,11 @@ const Index = ({ allPosts }: Props) => {
         <div className={cx('BlogStart__top')}>
           <h1 className={cx('BlogStart__headline')}>Le Blog</h1>
           <div className={cx('BlogStart__subtitle')}>
-            A collection of different things I want to share with the internet
+            A collection of things I want to share with the internet
           </div>
         </div>
 
-        <Input onChange={handleFilterChange} value={filter} placeholder="Filtrera" />
+        <Input onChange={handleFilterChange} value={filter} placeholder="Filter" />
 
         {heroPost && (
           <div className={cx('BlogStart__heroPost')}>
