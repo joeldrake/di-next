@@ -53,7 +53,9 @@ export function getAllPosts(fields: string[] = []) {
       const t1 = post1.title;
       const t2 = post2.title;
 
-      return t1 > t2 ? 1 : -1;
+      const p2HasDate = d2 && d2 != '0000';
+
+      return t1 > t2 ? 1 : p2HasDate ? 1 : -1;
     });
   return posts;
 }
