@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 import { getAllPosts } from '@/utils/api';
 import Head from 'next/head';
@@ -10,6 +11,7 @@ import Contact from '@/components/presentation/Contact';
 import styles from '@/styles/BlogStart.module.css';
 import classNames from 'classnames/bind';
 import Input from '@/components/Input';
+import Tag from '@/components/Tag';
 
 const cx = classNames.bind(styles);
 
@@ -18,9 +20,31 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
+  const router: any = useRouter();
+  const filterTag = router.query.tag;
+
   const [filter, setFilter] = useState('');
+
+  const removeTag = () => {
+    router.push({
+      pathname: '/blog',
+    });
+
+    const blogFilter = document.getElementById('blogFilter');
+    if (blogFilter) {
+      window.scrollTo({
+        top: blogFilter.offsetTop - 16,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const handleFilterChange = (e: any) => {
     setFilter(e.target.value);
+  };
+
+  const handleFilterClear = () => {
+    setFilter('');
   };
 
   const hasFilter = filter && filter.length;
@@ -28,15 +52,28 @@ const Index = ({ allPosts }: Props) => {
   allPosts = allPosts.filter((post) => {
     if (post.hidden) return false;
 
-    if (hasFilter) {
-      return post.title.toUpperCase().includes(filter.toUpperCase());
+    if (filterTag) {
+      if (filterTag.length === 2) {
+        // treat as lang
+        return post.lang === filterTag;
+      } else {
+        const tagsArray = post.tags ? post.tags.split(',') : null;
+        if (!tagsArray) return false;
+        return tagsArray.includes(filterTag);
+      }
     }
-
     return true;
   });
+  if (hasFilter) {
+    allPosts = allPosts.filter((post) => {
+      return post.title.toUpperCase().includes(filter.toUpperCase());
+    });
+  }
 
-  const heroPost = hasFilter ? null : allPosts[0];
-  const posts = hasFilter ? allPosts : allPosts.slice(1);
+  const noHero = filterTag || hasFilter;
+
+  const heroPost = noHero ? null : allPosts[0];
+  const posts = noHero ? allPosts : allPosts.slice(1);
 
   return (
     <>
@@ -54,7 +91,29 @@ const Index = ({ allPosts }: Props) => {
           </div>
         </div>
 
-        <Input onChange={handleFilterChange} value={filter} placeholder="Filter" />
+        <Input
+          id="blogFilter"
+          onClear={handleFilterClear}
+          onChange={handleFilterChange}
+          value={filter}
+          placeholder="Filter"
+        />
+
+        {filterTag && (
+          <div className={cx('BlogStart__filter')}>
+            <img
+              src="/images/filter.svg"
+              width="24"
+              height="24"
+              alt="Back"
+              aria-label="Filtering on these tags"
+              className={cx('BlogStart__filter-icon')}
+            />
+            <Tag onClose={removeTag}>
+              {filterTag.length === 2 ? (filterTag === 'sv' ? `🇸🇪` : `🇬🇧`) : filterTag}
+            </Tag>
+          </div>
+        )}
 
         {heroPost && (
           <div className={cx('BlogStart__heroPost')}>

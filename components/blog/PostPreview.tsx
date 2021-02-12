@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import DateFormatter from '@/components/DateFormatter';
 import styles from '@/styles/PostPreview.module.css';
 import classNames from 'classnames/bind';
@@ -22,6 +24,7 @@ type Props = {
 };
 
 const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
+  const router: any = useRouter();
   const tagsArray = tags ? tags.split(',') : null;
 
   const langTag = (lang: string) => {
@@ -30,6 +33,22 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
         {lang === 'sv' ? `🇸🇪` : `🇬🇧`}
       </span>
     );
+  };
+
+  const handleTagClick = ({ e, tag }: any) => {
+    router.push({
+      pathname: '/blog',
+      query: { tag },
+    });
+
+    const blogFilter = document.getElementById('blogFilter');
+
+    if (blogFilter) {
+      window.scrollTo({
+        top: blogFilter.offsetTop - 16,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -57,8 +76,15 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
       )}
       {(tagsArray || lang) && (
         <div className={cx('PostPreview__tags')}>
-          {lang && <Tag>{langTag(lang)}</Tag>}
-          {tagsArray && tagsArray.map((tag, i) => <Tag key={i}>{tag}</Tag>)}
+          {lang && (
+            <Tag onClick={(e: any) => handleTagClick({ e, tag: lang })}>{langTag(lang)}</Tag>
+          )}
+          {tagsArray &&
+            tagsArray.map((tag, i) => (
+              <Tag onClick={(e: any) => handleTagClick({ e, tag })} key={i}>
+                {tag}
+              </Tag>
+            ))}
         </div>
       )}
     </div>

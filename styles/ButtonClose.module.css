@@ -1,0 +1,24 @@
+.ButtonClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.ButtonClose img {
+  display: block;
+}
+
+.ButtonClose:focus,
+.ButtonClose:hover,
+.ButtonClose:active {
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+}

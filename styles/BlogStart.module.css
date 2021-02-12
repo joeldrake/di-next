@@ -27,6 +27,17 @@
   font-family: Times, 'Times New Roman', Serif;
 }
 
+.BlogStart__filter {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.BlogStart__filter-icon {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem; /* to match tag */
+}
+
 .BlogStart__morePosts {
   display: grid;
   padding: 2rem 0;

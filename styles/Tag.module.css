@@ -1,7 +1,27 @@
 .Tag {
-  display: inline-block;
-  margin: 0 0.5rem 0.5rem 0;
+  display: inline-flex;
+  flex-direction: row;
   background: #f7f7f7;
   border: 1px solid var(--border);
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.Tag__inner,
+.Tag__button {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
   padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+}
+
+.Tag__button {
+  cursor: pointer;
+}
+.Tag__button:hover,
+.Tag__button:active,
+.Tag__button:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
 }
