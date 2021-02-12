@@ -1,6 +1,10 @@
 ---
 title: 'Amerikanska pannkakor'
 tags: recept
+image:
+  url: '/assets/blog/pannkakor.jpg'
+  width: 1200,
+  height: 800,
 lang: sv
 ---
 
