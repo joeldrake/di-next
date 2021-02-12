@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
-import { getPostBySlug, getAllPosts } from '@/lib/api';
+import { getPostBySlug, getAllPosts } from '@/utils/api';
 import Head from 'next/head';
-import markdownToHtml from '@/lib/markdownToHtml';
+import markdownToHtml from '@/utils/markdownToHtml';
 import PostType from '@/types/post';
 import PreviewBanner from '@/components/PreviewBanner';
 import Header from '@/components/Header';

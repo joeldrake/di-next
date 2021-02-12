@@ -1,4 +1,5 @@
-import { isIos } from '@/lib/browser';
+import { isIos } from '@/utils/browser';
+import sleep from '@/utils/sleep';
 
 import styles from '@/styles/Input.module.css';
 import classNames from 'classnames/bind';
@@ -11,8 +12,8 @@ type Props = {
 };
 
 const Input = ({ onChange, value, placeholder }: Props) => {
-  const handleFocus = (e: any) => {
-    if (isIos()) return;
+  const handleFocus = async (e: any) => {
+    if (isIos()) await sleep(100); // wait for iphones auto scroll to happen
     window.scrollTo({
       top: e.target.offsetTop - 16,
       behavior: 'smooth',

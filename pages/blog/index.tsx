@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { getAllPosts } from '@/lib/api';
+import { getAllPosts } from '@/utils/api';
 import Head from 'next/head';
 import Post from '@/types/post';
 import Header from '@/components/Header';

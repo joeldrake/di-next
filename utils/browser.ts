@@ -1,4 +1,4 @@
-export function isIos() {
+export const isIos = () => {
   if (!navigator) return false;
   return (
     ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(
@@ -7,4 +7,4 @@ export function isIos() {
     // iPad on iOS 13 detection
     (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
   );
-}
+};
