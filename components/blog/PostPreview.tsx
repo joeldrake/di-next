@@ -35,20 +35,22 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
     );
   };
 
-  const handleTagClick = ({ e, tag }: any) => {
+  const handleTagClick = ({ tag }: any) => {
     router.push({
       pathname: '/blog',
       query: { tag },
     });
 
     const blogFilter = document.getElementById('blogFilter');
+    if (!blogFilter) return;
+    // because of position relative
+    const targetParent = blogFilter.closest('div');
+    if (!targetParent) return;
 
-    if (blogFilter) {
-      window.scrollTo({
-        top: blogFilter.offsetTop - 16,
-        behavior: 'smooth',
-      });
-    }
+    window.scrollTo({
+      top: targetParent.offsetTop - 16,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -76,12 +78,10 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
       )}
       {(tagsArray || lang) && (
         <div className={cx('PostPreview__tags')}>
-          {lang && (
-            <Tag onClick={(e: any) => handleTagClick({ e, tag: lang })}>{langTag(lang)}</Tag>
-          )}
+          {lang && <Tag onClick={() => handleTagClick({ tag: lang })}>{langTag(lang)}</Tag>}
           {tagsArray &&
             tagsArray.map((tag, i) => (
-              <Tag onClick={(e: any) => handleTagClick({ e, tag })} key={i}>
+              <Tag onClick={() => handleTagClick({ tag })} key={i}>
                 {tag}
               </Tag>
             ))}

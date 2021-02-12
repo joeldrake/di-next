@@ -31,12 +31,15 @@ const Index = ({ allPosts }: Props) => {
     });
 
     const blogFilter = document.getElementById('blogFilter');
-    if (blogFilter) {
-      window.scrollTo({
-        top: blogFilter.offsetTop - 16,
-        behavior: 'smooth',
-      });
-    }
+    if (!blogFilter) return;
+    // because of position relative
+    const targetParent = blogFilter.closest('div');
+    if (!targetParent) return;
+
+    window.scrollTo({
+      top: targetParent.offsetTop - 16,
+      behavior: 'smooth',
+    });
   };
 
   const handleFilterChange = (e: any) => {
