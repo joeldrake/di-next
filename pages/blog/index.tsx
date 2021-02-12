@@ -83,7 +83,11 @@ const Index = ({ allPosts }: Props) => {
         <meta property="og:image" content={'/images/joeldrake.jpg'} />
       </Head>
       <Header />
-      <div className={cx('BlogStart', 'siteSidePadding', 'fadeIn', 'siteWidth')}>
+      <div
+        className={cx('BlogStart', 'siteSidePadding', 'fadeIn', 'siteWidth', {
+          'BlogStart--noHero': noHero,
+        })}
+      >
         <div className={cx('BlogStart__top')}>
           <h1 className={cx('BlogStart__headline')}>Le Blog</h1>
           <div className={cx('BlogStart__subtitle')}>

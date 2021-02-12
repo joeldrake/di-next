@@ -45,6 +45,10 @@
   gap: 2rem 3rem;
 }
 
+.BlogStart--noHero .BlogStart__morePosts {
+  padding-top: 0;
+}
+
 @media screen and (max-width: 600px) {
   .BlogStart__morePosts {
     grid-template-columns: 1fr;
