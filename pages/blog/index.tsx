@@ -90,7 +90,7 @@ const Index = ({ allPosts }: Props) => {
       </Head>
       <Header />
       <div
-        className={cx('BlogStart', 'fadeIn', 'siteSidePadding', 'siteWidth', {
+        className={cx('BlogStart', 'fadeInFromLeft', 'siteSidePadding', 'siteWidth', {
           'BlogStart--noHero': noHero,
         })}
       >
@@ -166,7 +166,6 @@ const Index = ({ allPosts }: Props) => {
           </div>
         )}
       </div>
-      <Contact />
     </>
   );
 };

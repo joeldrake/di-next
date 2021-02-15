@@ -19,6 +19,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#__next {
+  overflow-x: hidden;
+}
+
 input,
 textarea,
 button {

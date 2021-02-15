@@ -43,7 +43,7 @@ const BlogPost = ({ post, preview }: Props) => {
         {post.excerpt && <meta name="description" content={post.excerpt} />}
       </Head>
       {preview && <PreviewBanner />}
-      <div className={cx('BlogPost', 'fadeIn', modifiers)}>
+      <div className={cx('BlogPost', 'fadeInFromRight', modifiers)}>
         {router.isFallback ? (
           <div className={cx('BlogPost__loading')}>Loading…</div>
         ) : (
