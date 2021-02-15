@@ -6,7 +6,7 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 import Link from 'next/link';
-import Image from 'next/image';
+
 import Tag from '@/components/Tag';
 
 type Props = {
@@ -58,13 +58,13 @@ const PostPreview = ({ title, image, date, slug, tags, lang }: Props) => {
       <Link as={`/blog/${slug}`} href="/blog/[slug]">
         <a className={cx('PostPreview__link')}>
           {image && (
-            <Image
+            <img
               className={cx('PostPreview__image')}
               src={image.url}
               alt={title}
               width={image.width || 960}
               height={image.height || 480}
-              sizes={'50%'}
+              loading="lazy"
             />
           )}
 

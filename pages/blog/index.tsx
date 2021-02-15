@@ -90,11 +90,11 @@ const Index = ({ allPosts }: Props) => {
       </Head>
       <Header />
       <div
-        className={cx('BlogStart', 'fadeInFromLeft', 'siteSidePadding', 'siteWidth', {
+        className={cx('BlogStart', 'fadeIn', 'siteSidePadding', 'siteWidth', {
           'BlogStart--noHero': noHero,
         })}
       >
-        <div className={cx('BlogStart__top', 'fadeIn')}>
+        <div className={cx('BlogStart__top')}>
           <h1 className={cx('BlogStart__headline')}>Le Blog</h1>
           <div className={cx('BlogStart__subtitle')}>
             A collection of things I want to share with the internet
