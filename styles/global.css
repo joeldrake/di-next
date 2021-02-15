@@ -1,5 +1,6 @@
 @import './colors.css';
 @import './syntaxHighlighting.css';
+@import './animations.css';
 
 html,
 body {
@@ -113,22 +114,6 @@ a {
 
 .invisibleSideScrolling::-webkit-scrollbar {
   display: none;
-}
-
-.fadeIn {
-  animation-name: fadeInAnimation;
-  animation-duration: 1s;
-}
-
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(0.5rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .siteSidePadding {

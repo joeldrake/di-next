@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-
+import Head from 'next/head';
 import { getAllPosts } from '@/utils/api';
 import Post from '@/types/post';
 import Header from '@/components/Header';
@@ -77,11 +77,20 @@ const Index = ({ allPosts }: Props) => {
   const heroPost = noHero ? null : allPosts[0];
   const posts = noHero ? allPosts : allPosts.slice(1);
 
+  let title = 'Drake Innovation';
+  if (filterTag) {
+    title = filterTag[0].toUpperCase() + filterTag.substring(1);
+    if (filterTag != 'recept') title += ` – Drake Innovation`;
+  }
+
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Header />
       <div
-        className={cx('BlogStart', 'siteSidePadding', 'siteWidth', {
+        className={cx('BlogStart', 'fadeInFromLeft', 'siteSidePadding', 'siteWidth', {
           'BlogStart--noHero': noHero,
         })}
       >

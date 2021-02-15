@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-
 import styles from '@/styles/Header.module.css';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
@@ -91,6 +90,8 @@ const Header = () => {
 
   const handleBackButton = (e: any) => {
     if (typeof window === 'undefined') return;
+    if (document.referrer == '') return;
+
     e.preventDefault();
     router.back();
   };

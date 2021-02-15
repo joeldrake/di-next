@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-
 import { getPostBySlug, getAllPosts } from '@/utils/api';
 import Head from 'next/head';
 import markdownToHtml from '@/utils/markdownToHtml';
@@ -21,6 +20,7 @@ type Props = {
 
 const BlogPost = ({ post, preview }: Props) => {
   const router = useRouter();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -38,14 +38,12 @@ const BlogPost = ({ post, preview }: Props) => {
     <>
       <Header />
       <Head>
-        <title>{post.title} || Drake Innovation</title>
+        <title>{post.title} — Drake Innovation</title>
         {post.image && <meta property="og:image" content={post.image.url} />}
-        <link rel="shortcut icon" href="/images/dragon.png" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <meta name="description" content={post.excerpt} />
+        {post.excerpt && <meta name="description" content={post.excerpt} />}
       </Head>
       {preview && <PreviewBanner />}
-      <div className={cx('BlogPost', 'fadeIn', modifiers)}>
+      <div className={cx('BlogPost', 'fadeInFromRight', modifiers)}>
         {router.isFallback ? (
           <div className={cx('BlogPost__loading')}>Loading…</div>
         ) : (
