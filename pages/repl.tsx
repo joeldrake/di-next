@@ -60,12 +60,6 @@ const Repl = () => {
 
   return (
     <div className={cx('Repl')}>
-      <Head>
-        <title>Drake Innovation</title>
-        <meta name="description" content="Drake Innovation" />
-        <meta property="og:image" content={'/images/joeldrake.jpg'} />
-      </Head>
-
       <textarea id="code" className={cx('Repl__textarea')} onInput={update} />
 
       <iframe title="output" className={cx('Repl__iframe')} id="output"></iframe>

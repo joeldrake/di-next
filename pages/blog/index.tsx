@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { getAllPosts } from '@/utils/api';
-import Head from 'next/head';
 import Post from '@/types/post';
 import Header from '@/components/Header';
 import PostPreview from '@/components/blog/PostPreview';
@@ -80,11 +79,6 @@ const Index = ({ allPosts }: Props) => {
 
   return (
     <>
-      <Head>
-        <title>Drake Innovation</title>
-        <meta name="description" content="Drake Innovation" />
-        <meta property="og:image" content={'/images/joeldrake.jpg'} />
-      </Head>
       <Header />
       <div
         className={cx('BlogStart', 'siteSidePadding', 'siteWidth', {
