@@ -19,7 +19,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .BlogPost {
+  .BlogPost__inner {
     padding-top: 4rem;
   }
   .BlogPost--no-image {
