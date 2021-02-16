@@ -6,7 +6,7 @@
   padding-top: 5rem;
 }
 
-.BlogPost--no-image {
+.BlogPost--no-image .BlogPost__inner {
   padding-top: 7.5rem;
 }
 
@@ -22,7 +22,7 @@
   .BlogPost__inner {
     padding-top: 4rem;
   }
-  .BlogPost--no-image {
+  .BlogPost--no-image .BlogPost__inner {
     padding-top: 5rem;
   }
 }
