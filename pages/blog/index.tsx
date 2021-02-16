@@ -166,6 +166,7 @@ const Index = ({ allPosts }: Props) => {
           </div>
         )}
       </div>
+      <Contact />
     </>
   );
 };
