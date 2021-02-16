@@ -90,7 +90,7 @@ const Header = () => {
 
   const handleBackButton = (e: any) => {
     if (typeof window === 'undefined') return;
-    if (!window.history.length) return;
+    if (window.history.length < 2) return; // temp until site gets proper global state
 
     e.preventDefault();
     router.back();
