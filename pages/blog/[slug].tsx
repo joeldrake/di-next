@@ -43,42 +43,40 @@ const BlogPost = ({ post, preview }: Props) => {
         {post.excerpt && <meta name="description" content={post.excerpt} />}
       </Head>
       {preview && <PreviewBanner />}
-      <div className={cx('BlogPost', modifiers)}>
-        <div className={cx('BlogPost__inner', 'fadeInFromRight')}>
-          {router.isFallback ? (
-            <div className={cx('BlogPost__loading')}>Loading…</div>
-          ) : (
-            <article>
-              {post.image && (
-                <CoverImage
-                  title={post.title}
-                  src={post.image.url}
-                  width={`${post.image.width}` || '2000'}
-                  height={`${post.image.height}` || '1000'}
-                />
+      <div className={cx('BlogPost', 'fadeIn', modifiers)}>
+        {router.isFallback ? (
+          <div className={cx('BlogPost__loading')}>Loading…</div>
+        ) : (
+          <article>
+            {post.image && (
+              <CoverImage
+                title={post.title}
+                src={post.image.url}
+                width={`${post.image.width}` || '2000'}
+                height={`${post.image.height}` || '1000'}
+              />
+            )}
+
+            <div className={'siteWidth siteSidePadding'}>
+              <h1
+                className={cx('BlogPost__title')}
+                dangerouslySetInnerHTML={{ __html: post.title }}
+              />
+
+              {post.date && (
+                <p className={cx('BlogPost__subtitle')}>
+                  <DateFormatter dateString={post.date} />
+                  {post.author && <span>, {post.author}</span>}
+                </p>
               )}
 
-              <div className={'siteWidth siteSidePadding'}>
-                <h1
-                  className={cx('BlogPost__title')}
-                  dangerouslySetInnerHTML={{ __html: post.title }}
-                />
-
-                {post.date && (
-                  <p className={cx('BlogPost__subtitle')}>
-                    <DateFormatter dateString={post.date} />
-                    {post.author && <span>, {post.author}</span>}
-                  </p>
-                )}
-
-                <div
-                  className={cx('BlogPost__markdown')}
-                  dangerouslySetInnerHTML={{ __html: post.content }}
-                />
-              </div>
-            </article>
-          )}
-        </div>
+              <div
+                className={cx('BlogPost__markdown')}
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              />
+            </div>
+          </article>
+        )}
       </div>
     </>
   );

@@ -90,7 +90,7 @@ const Index = ({ allPosts }: Props) => {
       </Head>
       <Header />
       <div
-        className={cx('BlogStart', 'fadeInFromLeft', 'siteSidePadding', 'siteWidth', {
+        className={cx('BlogStart', 'siteSidePadding', 'siteWidth', {
           'BlogStart--noHero': noHero,
         })}
       >

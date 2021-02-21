@@ -39,7 +39,7 @@ You can then post messages to the iframe and get it to render directly to its bo
   const textarea = document.getElementById('code');
   const iframe = document.getElementById('output');
 
-  const srcdoc = html`
+  iframe.srcdoc = html`
     <!DOCTYPE html>
     <html>
       <head>
@@ -58,20 +58,14 @@ You can then post messages to the iframe and get it to render directly to its bo
               });
             }
           }
-          window.addEventListener(
-            'message',
-            (e) => {
-              iframe_update(e.data);
-            },
-            false
-          );
-        <\/script>
+          window.addEventListener('message', (e) => {
+            iframe_update(e.data);
+          });
+        </script>
       </head>
       <body></body>
     </html>
   `;
-
-  iframe.srcdoc = srcdoc;
 
   function update() {
     iframe.contentWindow.postMessage(textarea.value, '*');
