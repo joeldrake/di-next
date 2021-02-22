@@ -66,7 +66,7 @@ const BlogPost = ({ post, preview }: Props) => {
 
                 {post.date && (
                   <p className={cx('BlogPost__subtitle')}>
-                    <DateFormatter dateString={post.date} />
+                    <DateFormatter dateString={post.date} lang={post.lang} />
                     {post.author && <span>, {post.author}</span>}
                   </p>
                 )}

@@ -174,7 +174,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'image', 'tags', 'lang']);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'image', 'tags', 'lang', 'hidden']);
 
   return {
     props: {
