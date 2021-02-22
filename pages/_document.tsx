@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Drake Innovation</title>
           <meta name="description" content="Drake Innovation" />
           <meta property="og:image" content={'/images/joeldrake.jpg'} />
           <link rel="apple-touch-icon" href="/images/icon.jpg" />

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useEffect } from 'react';
 
 import styles from '@/styles/Repl.module.css';
@@ -30,14 +29,10 @@ const Repl = () => {
                 });
               }            
             }
-            window.addEventListener(
-              'message',
-              (e) => {
-                iframe_update(e.data);
-              },
-              false
-            );
-          <\/script>
+            window.addEventListener('message', (e) => {
+              iframe_update(e.data);
+            });
+          </script>
         </head>
         <body></body>
       </html>
