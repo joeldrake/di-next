@@ -1,7 +1,7 @@
 ---
 title: 'Webbprogrammering — grunden'
 image:
-  url: '/assets/blog/code.jpg'
+  url: '/assets/blog/computer.jpg'
   width: 1200,
   height: 600,
 author: 'Joel Drake'
