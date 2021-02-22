@@ -8,6 +8,7 @@ author: 'Joel Drake'
 date: '2021-02-02'
 tags: coding
 lang: sv
+hidden: true
 ---
 
 Det här är en guide för dig som vill lära dig hur programmering fungerar. Inriktningen kommer vara webbprogrammering, för att kunna skapa hemsidor och webbappar, men principen för den mesta formen av programmering är ändå densamma.
