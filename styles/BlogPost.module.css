@@ -83,3 +83,8 @@
 .BlogPost--recept table {
   font-size: 1.125rem; /* 18px */
 }
+
+.BlogPost__markdown p code {
+  background-color: var(--site-cyan-lighter);
+  padding: 0.1rem 0.2rem;
+}
