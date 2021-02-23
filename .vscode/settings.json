@@ -7,5 +7,19 @@
     "titleBar.inactiveForeground": "#fff",
     "titleBar.activeBackground": "#007200",
     "titleBar.inactiveBackground": "#004000"
-  }
+  },
+  "cSpell.language": "en,sv",
+  "cSpell.words": [
+    "fil",
+    "filändelse",
+    "grundkoncept",
+    "lt",
+    "ndelse",
+    "programmeringsspråk",
+    "textf",
+    "textfält",
+    "trippla",
+    "webbappar",
+    "webbprogrammering"
+  ]
 }

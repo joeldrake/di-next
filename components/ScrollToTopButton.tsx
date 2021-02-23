@@ -4,7 +4,7 @@ import onScroll from '@/utils/onScroll';
 const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 200) {
       setShowButton(true);
     } else {
       setShowButton(false);
