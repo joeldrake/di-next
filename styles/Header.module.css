@@ -43,11 +43,6 @@
 .Header__backButton:active,
 .Header__backButton:focus {
   outline: 0;
-}
-
-.Header__backButton:hover,
-.Header__backButton:active,
-.Header__backButton:focus {
   background: rgba(0, 0, 0, 0.1);
 }
 

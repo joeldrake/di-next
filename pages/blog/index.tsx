@@ -11,6 +11,7 @@ import styles from '@/styles/BlogStart.module.css';
 import classNames from 'classnames/bind';
 import Input from '@/components/Input';
 import Tag from '@/components/Tag';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const cx = classNames.bind(styles);
 
@@ -167,6 +168,7 @@ const Index = ({ allPosts }: Props) => {
         )}
       </div>
       <Contact />
+      <ScrollToTopButton />
     </>
   );
 };

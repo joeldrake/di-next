@@ -39,7 +39,7 @@ You can then post messages to the iframe and get it to render directly to its bo
   const textarea = document.getElementById('code');
   const iframe = document.getElementById('output');
 
-  iframe.srcdoc = html`
+  iframe.srcdoc = `
     <!DOCTYPE html>
     <html>
       <head>
