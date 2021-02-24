@@ -1,7 +1,7 @@
 ---
 title: 'Programmering — grunden med javascript'
 image:
-  url: '/assets/blog/computer.jpg'
+  url: '/assets/blog/computermagic.jpg'
   width: 1200,
   height: 600,
 author: 'Joel Drake'
