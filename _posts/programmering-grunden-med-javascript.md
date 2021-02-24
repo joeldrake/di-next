@@ -1,5 +1,5 @@
 ---
-title: 'Webbprogrammering — grunden'
+title: 'Programmering — grunden med javascript'
 image:
   url: '/assets/blog/computer.jpg'
   width: 1200,
@@ -11,7 +11,9 @@ lang: sv
 hidden: true
 ---
 
-Det här är en guide för dig som vill lära dig hur programmering fungerar. Inriktningen kommer vara webbprogrammering, för att kunna skapa hemsidor och webbappar, men principen för den mesta formen av programmering är ändå densamma.
+Det här är en guide för dig som vill lära dig hur programmering fungerar generellt, men inriktningen är webbutveckling. Guiden utgår från javascript, då det är vad som används för att skapa hemsidor och webbappar, men principen för den mesta formen av programmering är ändå densamma.
+
+Innan vi går in på javascript måste vi först göra göra en snabb genomgång av generell webbutveckling.
 
 ## De tre beståndsdelarna av en webbsida
 
@@ -39,7 +41,7 @@ Olika html-taggar används för att berätta för webbläsaren vad det är för 
 
 ## CSS
 
-Detta är webbsidans design. Du kan skapa en fil med filändelsen `.css` och sedan länka in den i din html-fil. Du kan även skriva css-kod inbakat i din html-fil. Så har jag gjort i exemplet nedan.
+Detta är webbsidans design. Centralt i css är `classer` som skrivs och sedan hakas på i html-kodens taggar.
 
 ```html
 <div class="exempel">
@@ -83,7 +85,7 @@ Detta är webbsidans design. Du kan skapa en fil med filändelsen `.css` och sed
 
 Detta är vad som gör webbsidan interaktiv. Med javascript kan du göra så att något händer när användaren t.ex. klickar på en knapp eller eller skriver något i ett textfält.
 
-På samma sätt som css kan javascript bakas in i din html-fil, som i exemplet nedan. Men det vanligaste sättet är att man lägger det i en egen fil med filändelse `.js`.
+Javascript och css kan bakas in i din html-fil, som i exemplen här. Men det vanligaste sättet är att man lägger det i en egen fil med filändelse `.js` och sedan importerar i html-filen.
 
 ```html
 <div>
@@ -123,7 +125,7 @@ antal = antal + 5;
 
 Variabler kan _deklareras_ med `let` eller `const` i javascript. let skapar en variabel som kan ändras senare i koden, const (står för "constant") är menad att inte ändras efter den är satt. Att det finns olika sätt är tänkt att fungera som ett stöd för att undvika buggar 🐛 i koden.
 
-### De olika typer variabel kan ha
+### De olika typer en variabel kan ha
 
 Det finns en rad olika typer av variabler. Nedan är inte en komplett lista över alla typer som finns, utan istället de vanligt förekommande formerna du jobbar med när du programmerar.
 
@@ -149,7 +151,9 @@ const value = null;
 
 I javascript bestäms variabelns typ automatiskt när du skapar den. Det går sedan att ändra typ genom att bara ge den ett annat typ av värde.
 
-I många andra programmeringsspråk måste man ange vilken typ variabeln ska ha när man skapar den, och sedan går det inte att ändra. Detta är för att hålla ordning och reda och undvika buggar. Det är bra praxis att försöka använda samma mönster i javascript även fast det inte är ett krav.
+I många andra programmeringsspråk måste man ange vilken typ variabeln ska ha när man skapar den, och sedan går det inte att ändra. Detta är för att hålla ordning och reda och undvika buggar.
+
+I takt med att javascript har utvecklas har det här tänket börjat användas mer och mer i webbutveckling. Många avancerade webbsidor använder [Typescript](https://www.typescriptlang.org/) för att tvinga typ-deklaration.
 
 ### if-satser
 
@@ -169,7 +173,7 @@ if (antal) {
 }
 ```
 
-Du kan även kolla om en variabel stämmer överens med något. Detta görs med dubbla eller trippla likhetstecken (beroende på hur strikt jämförelsen ska vara). En enkelt likhetstecken skulle ändra värdet på det som exekveras i parentesen, det vill vi inte, vi vill bara kolla om det är sant.
+Du kan även kolla om en variabel stämmer överens med något. Detta görs med trippla likhetstecken (det går att använda dubbla, det är en mindre strikt variant, men detta är en kvarvara från den gamla tiden och bör undvikas). En enkelt likhetstecken skulle ändra värdet på det som exekveras i parentesen, det vill vi inte, vi vill bara kolla om det är sant.
 
 ```javascript
 let namn = 'Hugo';
@@ -191,12 +195,36 @@ let namn = 'Hugo';
 if (namn !== 'Kalle') {
   alert('Det är inte Kalle!');
 }
-// alerten kommer inte att köras, för kontrollen på namnet resulterar i false
+// alerten kommer att köras, för kontrollen på namnet resulterar i true
 ```
+
+#### Operatorer
+
+Det finns en uppsjö av [operatorer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+| Operator | Explanation                         | Examples |
+| -------- | ----------------------------------- | -------- |
+| =        | (Equals set a variable to a value). | a = b    |
+| ===      | Equals? (compare two values)        | a === b  |
+| !==      | Not equal                           | a != b   |
+| +        | Plus                                | a + b    |
+| +=       | Addition                            | a += b   |
+| ++       | Increment                           | a++      |
+| -        | Minus                               | a - b    |
+| -=       | Subtraction                         | a -= b   |
+| --       | Decrement                           | a--      |
+| /        | Divide                              | a / b    |
+| \*       | Times                               | a \* b   |
+| >        | Greater than                        | a > b    |
+| <        | Less than                           | a < b    |
+| >=       | Greater than or equal to            | a >= b   |
+| <=       | Less than or equal to               | a <= b   |
+| \|\|     | Boolean or                          | a \|\| b |
+| &&       | Boolean and                         | a && b   |
 
 ### Funktioner
 
-När du skapat en funktion kan du kalla på den hur många gånger du vill. Funktionen kan ta emot en eller flera variabler, den kan utföra en uppgift och den kan `returnera` en variabel.
+När du skapat en funktion kan du kalla på den från andra ställen i koden. Funktioner kan ta emot en eller flera variabler, de kan utföra en uppgift och den kan `returnera` en variabel.
 
 ```javascript
 let antal = 10;
@@ -209,4 +237,16 @@ add(1);
 add(5);
 
 // antal är nu 16
+```
+
+### Iterationer/loopar
+
+Iterationer är kallas oftast i svenskt talspråk för loopar. På engelska säger man dock _iteration_ så det kan vara enklast att förhålla sig till det (man kan säga att det internationella språket som används inom programmeringskod är engelska).
+
+En iteration är en instruktion i koden att en viss sak ska hända upprepade gånger.
+
+```javascript
+for (let index = 0; index < 100; index++) {
+  //
+}
 ```
