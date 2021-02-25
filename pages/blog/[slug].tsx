@@ -120,7 +120,7 @@ const BlogPost = ({ post, preview }: Props) => {
         .BlogPost__markdown :global(h3) {
           font-family: Times, 'Times New Roman', Serif;
           line-height: 1;
-          letter-spacing: -2px;
+          letter-spacing: -1px;
           margin: 2rem 0 1rem 0;
         }
         .BlogPost__markdown :global(h4) {
@@ -163,6 +163,10 @@ const BlogPost = ({ post, preview }: Props) => {
         .BlogPost--recept :global(li),
         .BlogPost--recept :global(table) {
           font-size: 1.125rem; /* 18px */
+        }
+
+        .BlogPost--coding :global(table) {
+          width: 100%;
         }
 
         .BlogPost__markdown :global(p code) {

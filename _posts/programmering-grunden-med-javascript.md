@@ -23,7 +23,7 @@ En webbsida består tekniskt sett av tre olika byggstenar: `HTML`, `CSS` och `Ja
 
 Detta är webbsidans skelett. Du kan skapa en fil med valfritt namn och filändelsen `.html`, öppna den sedan med en webbläsare så kommer webbläsaren att avkoda din HTML-kod och visa innehållet.
 
-Olika html-taggar används för att berätta för webbläsaren vad det är för typ av innehåll, och de kan även påverka hur innehållet visas.
+Olika html-taggar används för att berätta för webbläsaren vad det är för typ av innehåll. De kan även påverka hur innehållet visas eller ge en viss funktion.
 
 ```html
 <div>
@@ -39,7 +39,7 @@ Olika html-taggar används för att berätta för webbläsaren vad det är för 
 
 <br />
 
-## CSS
+### CSS
 
 Detta är webbsidans design. Centralt i css är `classer` som skrivs och sedan hakas på i html-kodens taggar.
 
@@ -81,11 +81,9 @@ Detta är webbsidans design. Centralt i css är `classer` som skrivs och sedan h
 
 <br />
 
-## Javascript
+### Javascript
 
 Detta är vad som gör webbsidan interaktiv. Med javascript kan du göra så att något händer när användaren t.ex. klickar på en knapp eller eller skriver något i ett textfält.
-
-Javascript och css kan bakas in i din html-fil, som i exemplen här. Men det vanligaste sättet är att man lägger det i en egen fil med filändelse `.js` och sedan importerar i html-filen.
 
 ```html
 <div>
@@ -94,7 +92,7 @@ Javascript och css kan bakas in i din html-fil, som i exemplen här. Men det van
 
 <script>
   function visaMeddelande() {
-    alert('Hej 👋, alert är en inbyggd function i javascript');
+    alert('Hej 👋, alert är en inbyggd funktion i javascript');
   }
 
   const exempelKnapp = document.getElementById('exempelKnapp');
@@ -103,7 +101,7 @@ Javascript och css kan bakas in i din html-fil, som i exemplen här. Men det van
 </script>
 ```
 
-<button onclick="alert('Hej 👋, alert är en inbyggd function i javascript')">Klicka på mig</button>
+<button onclick="alert('Hej 👋, alert är en inbyggd funktion i javascript')">Klicka på mig</button>
 
 <br />
 
@@ -113,7 +111,7 @@ Nu har du koll på grunderna för webben. Nu kan vi komma igång med det intress
 
 Javascript är den del av webbprogrammering som mest liknar klassisk programmering, som förekommer i andra delar av IT-världen. Vi börjar med att gå igenom några grundkoncept.
 
-### Variabler
+## Variabler
 
 En variabel är ett namn du skapar, ger ett värde och sedan kan jobba med.
 
@@ -130,13 +128,13 @@ Variabler kan _deklareras_ med `let` eller `const` i javascript. let skapar en v
 Det finns en rad olika typer av variabler. Nedan är inte en komplett lista över alla typer som finns, utan istället de vanligt förekommande formerna du jobbar med när du programmerar.
 
 ```javascript
-// Nummer (går att ändra med vanlig matematik )
+// Nummer (går att ändra med matematiska operatorer)
 const antal = 10;
 
 // Sträng (all typ av text)
 const efternamn = 'Johansson';
 
-// Objekt (fungerar som ett sätt att samla en massa variabler under ett gemensamt namn)
+// Objekt (fungerar som ett sätt att samla flera variabler under ett gemensamt namn)
 const user = { name: 'Kalle', surname: 'Johansson', age: 42 };
 
 // Array (en lista av variabler, bra för att senare kunna stega igenom alla saker i listan)
@@ -145,7 +143,7 @@ const frukter = ['Äpple', 'Banan', 'Ananas'];
 // Boolean (kan vara true eller false)
 const open = true;
 
-// Ej satt värde (om satt manuellt så används null, variabel som aldrig haft ett värde kan vara undefined)
+// Ej satt värde (om satt manuellt så används null, variabel som aldrig haft ett värde är undefined)
 const value = null;
 ```
 
@@ -155,11 +153,11 @@ I många andra programmeringsspråk måste man ange vilken typ variabeln ska ha 
 
 I takt med att javascript har utvecklas har det här tänket börjat användas mer och mer i webbutveckling. Många avancerade webbsidor använder [Typescript](https://www.typescriptlang.org/) för att tvinga typ-deklaration.
 
-### if-satser
+## if-satser
 
-En if-sats låter dig köra utvald kod om det du anger i if-satsen är `true`. Observera att det som anges i if-satsens parentes _exekveras_ för att kolla om värdet är true/false.
+En if-sats låter dig köra utvald kod när det du anger i if-satsen är `true`. Observera att det som anges i if-satsens parentes _exekveras_ för att kolla om värdet är true/false.
 
-Du kan ange en boolean variabel, eller vilken annan typ av variabel som helst, om den har ett värde så kommer den anses vara true (det finns några specialregler här som t.ex. att siffran 0 är false och även en tom sträng.
+Du kan ange en boolean variabel, eller vilken annan typ av variabel som helst, om den har ett värde så kommer den anses vara true. Det finns några specialregler här som t.ex. att siffran 0 är false och även en tom sträng är false.
 
 ```javascript
 let open = true;
@@ -173,7 +171,7 @@ if (antal) {
 }
 ```
 
-Du kan även kolla om en variabel stämmer överens med något. Detta görs med trippla likhetstecken (det går att använda dubbla, det är en mindre strikt variant, men detta är en kvarvara från den gamla tiden och bör undvikas). En enkelt likhetstecken skulle ändra värdet på det som exekveras i parentesen, det vill vi inte, vi vill bara kolla om det är sant.
+Du kan även kolla om en variabel stämmer överens med något. Detta görs med trippla likhetstecken (det går att använda dubbla likhetstecken, det är en mindre strikt kvarleva från den gamla tiden och bör undvikas). En enkelt likhetstecken skulle ändra värdet på det som exekveras i parentesen, det vill vi inte, vi vill bara kolla om det är sant.
 
 ```javascript
 let namn = 'Hugo';
@@ -198,33 +196,35 @@ if (namn !== 'Kalle') {
 // alerten kommer att köras, för kontrollen på namnet resulterar i true
 ```
 
-#### Operatorer
+### Operatorer
 
-Det finns en uppsjö av [operatorer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+Det finns en uppsjö av [operatorer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) för att ändra eller kontrollera värden i koden. Här är en förteckning av de vanligaste.
 
-| Operator | Explanation                         | Examples |
-| -------- | ----------------------------------- | -------- |
-| =        | (Equals set a variable to a value). | a = b    |
-| ===      | Equals? (compare two values)        | a === b  |
-| !==      | Not equal                           | a != b   |
-| +        | Plus                                | a + b    |
-| +=       | Addition                            | a += b   |
-| ++       | Increment                           | a++      |
-| -        | Minus                               | a - b    |
-| -=       | Subtraction                         | a -= b   |
-| --       | Decrement                           | a--      |
-| /        | Divide                              | a / b    |
-| \*       | Times                               | a \* b   |
-| >        | Greater than                        | a > b    |
-| <        | Less than                           | a < b    |
-| >=       | Greater than or equal to            | a >= b   |
-| <=       | Less than or equal to               | a <= b   |
-| \|\|     | Boolean or                          | a \|\| b |
-| &&       | Boolean and                         | a && b   |
+| Operator | Förklaring                         | Exempel  |
+| -------- | ---------------------------------- | -------- |
+| =        | Sätter en variabel till ett värde  | a = b    |
+| ===      | Lika med? (jämför två värden)      | a === b  |
+| !==      | Inte lika med                      | a !== b  |
+| +        | Plus                               | a + b    |
+| +=       | Adderar värde till en variabel     | a += b   |
+| ++       | Ökar värdet med 1                  | a++      |
+| -        | Minus                              | a - b    |
+| -=       | Subtraherar värde från en variabel | a -= b   |
+| --       | Minskar värdet med 1               | a--      |
+| /        | Delat med                          | a / b    |
+| \*       | Gånger                             | a \* b   |
+| >        | Större än                          | a > b    |
+| <        | Mindre än                          | a < b    |
+| >=       | Större eller lika med              | a >= b   |
+| <=       | Mindre eller lika med              | a <= b   |
+| \|\|     | Eller                              | a \|\| b |
+| &&       | Och                                | a && b   |
 
-### Funktioner
+## Funktioner
 
 När du skapat en funktion kan du kalla på den från andra ställen i koden. Funktioner kan ta emot en eller flera variabler, de kan utföra en uppgift och den kan `returnera` en variabel.
+
+#### Exempel utan returnering
 
 ```javascript
 let antal = 10;
@@ -239,14 +239,85 @@ add(5);
 // antal är nu 16
 ```
 
-### Iterationer/loopar
+#### Exempel med returnering
 
-Iterationer är kallas oftast i svenskt talspråk för loopar. På engelska säger man dock _iteration_ så det kan vara enklast att förhålla sig till det (man kan säga att det internationella språket som används inom programmeringskod är engelska).
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+let antal = add(5, 5);
+// antal är nu 10
+```
+
+Man kan sätta ett namn på sin funktion som man sedan använder för att kalla på den, som i exemplen ovan. Det går även att skapa _anonyma_ funktioner. De har inget namn och används på ställen där ett namn på funktionen skulle vara överflödigt. Dessa funktioner kallas också för `arrow functions` eftersom syntaxen har en form av "pil" i sig.
+
+```javascript
+(a, b) => {
+  return a + b;
+};
+```
+
+Det går även att lagra en anonym funktion i ett variabelnamn. Då får man samma beteende som en namngiven funktion (med vissa skillnader).
+
+```javascript
+const namn = () => {
+  return 'Kalle';
+};
+
+alert(namn());
+// Kommer skicka upp en alert() med texten "Kalle"
+```
+
+Observera att det finns en _mängd_ inbyggda funktioner i javascript. Till exempel `alert()` som i exemplet ovan är en inbyggd funktion som skickar upp en ruta med valfri text. En annan vanligt förekommande är `fetch()` som används för att hämta data över nätverket.
+
+## Iterationer/loopar
+
+Iterationer kallas oftast i svenskt talspråk för loopar. På engelska säger man dock _iteration_ så det kan vara enklast att förhålla sig till det (det internationella språket som används inom programmeringskod är engelska).
 
 En iteration är en instruktion i koden att en viss sak ska hända upprepade gånger.
 
 ```javascript
+let antal = 0;
 for (let index = 0; index < 100; index++) {
-  //
+  // följande kod kommer att köras 100 gånger
+  antal++;
 }
+
+// antal är nu 100
 ```
+
+Exemplet ovan är en _klassik_ syntax för iteration som förekommer i en del andra programmeringsspråk också.
+
+Det finns många andra sätt att göra iterationer i javascript. Vissa metoder är lämnade för att ändra en lista till en annan form. Andra former är lämnade för att filtrera en lista till ett mindre antal.
+
+#### Gå igenom alla värden i en array
+
+```javascript
+const frukter = ['Äpple', 'Banan', 'Ananas'];
+frukter.forEach((frukt) => {
+  // kommer att kalla på funktionen add() med respektive frukt
+  add(frukt);
+});
+```
+
+#### Filtrera en array
+
+```javascript
+const frukter = ['Äpple', 'Banan', 'Ananas'];
+const urval = frukter.filter((frukt) => {
+  return frukt === 'Banan';
+});
+
+// urval kommer vara en array med enbart 1 inlägg: ['Banan]
+```
+
+## Sammanfattning
+
+Det här inlägget skrapar på ytan av vissa delar av programmering med javascript. Jag hoppas det har gett dig en lite bättre insikt av detta fungerar. Om du vill lära dig vidare så finns det en uppsjö av material att hitta online.
+
+Om du vill gå vidare så är min rekommendation att ladda ner textredigeraren [Visual Studio Code](https://code.visualstudio.com/), skapa en fil med filändelsen `.html`och börja testa dig fram.
+
+<br />
+
+_Det här inlägget kan komma att uppdateras i framtiden_
