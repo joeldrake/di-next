@@ -12,7 +12,7 @@ lang: sv
 
 Det här är en guide för dig som vill lära dig hur programmering fungerar generellt, men inriktningen är webbutveckling. Guiden utgår från javascript, då det är vad som används för att skapa hemsidor och webbappar, men principen för den mesta formen av programmering är ändå densamma.
 
-Innan vi går in på javascript måste vi först göra göra en snabb genomgång av generell webbutveckling.
+Innan vi går in på javascript måste vi först göra en snabb genomgång av generell webbutveckling.
 
 ## De tre beståndsdelarna av en webbsida
 
