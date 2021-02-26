@@ -314,9 +314,13 @@ const urval = listaMedNummer.filter((antal) => {
 
 ## Sammanfattning
 
-Det här inlägget skrapar på ytan av vissa delar av programmering med javascript. Jag hoppas det har gett dig en lite bättre insikt av detta fungerar. Om du vill lära dig vidare så finns det en uppsjö av material att hitta online.
+Det här inlägget skrapar på ytan av _vissa delar_ av programmering med javascript. Jag hoppas det har gett dig en lite bättre insikt i denna värld. Jag har insett att det är ett ganska stort åtagande att försöka täcka in allt i ett enskilt blogginlägg... 😅
 
-Om du vill gå vidare så är min rekommendation att ladda ner textredigeraren [Visual Studio Code](https://code.visualstudio.com/), skapa en fil med filändelsen `.html`och börja testa dig fram.
+Om du vill lära dig vidare så är min rekommendation att ladda ner textredigeraren [Visual Studio Code](https://code.visualstudio.com/), skapa en fil med filändelsen `.html` och börja testa dig fram.
+
+Googla sedan saker du vill göra. Bra sidor att hämta information från när man googlat är [w3schools.com](https://www.w3schools.com/), [developer.mozilla.org](https://developer.mozilla.org/) och [stackoverflow.com](https://stackoverflow.com/).
+
+När du kommit en bit på vägen och vill börja utforska mer avancerad webbutveckling så kommer du behöva sätta dig in i terminalen på din dator, npm, ramverk som t.ex React, Vue eller Svelte. I framtiden kanske jag gör ett nytt blogginläggsom som handlar om detta.
 
 <br />
 
