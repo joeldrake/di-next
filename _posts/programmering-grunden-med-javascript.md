@@ -8,7 +8,6 @@ author: 'Joel Drake'
 date: '2021-02-02'
 tags: coding
 lang: sv
-hidden: true
 ---
 
 Det här är en guide för dig som vill lära dig hur programmering fungerar generellt, men inriktningen är webbutveckling. Guiden utgår från javascript, då det är vad som används för att skapa hemsidor och webbappar, men principen för den mesta formen av programmering är ändå densamma.
