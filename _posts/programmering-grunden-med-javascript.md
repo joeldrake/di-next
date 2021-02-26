@@ -151,11 +151,11 @@ I javascript bestäms variabelns typ automatiskt när du skapar den. Det går se
 
 I många andra programmeringsspråk måste man ange vilken typ variabeln ska ha när man skapar den, och sedan går det inte att ändra. Detta är för att hålla ordning och reda och undvika buggar.
 
-I takt med att javascript har utvecklas har det här tänket börjat användas mer och mer i webbutveckling. Många avancerade webbsidor använder [Typescript](https://www.typescriptlang.org/) för att tvinga typ-deklaration.
+I takt med att javascript har utvecklats har det här tänket börjat användas mer och mer i webbutveckling. Många avancerade webbsidor använder [Typescript](https://www.typescriptlang.org/) för att tvinga typ-deklaration.
 
 ## if-satser
 
-En if-sats låter dig köra utvald kod när det du anger i if-satsen är `true`. Observera att det som anges i if-satsens parentes _exekveras_ för att kolla om värdet är true/false.
+En if-sats låter dig köra utvald kod när det du testar i if-satsen är `true`. Observera att det som anges i if-satsens parentes _exekveras_ för att kolla om värdet är true/false.
 
 Du kan ange en boolean variabel, eller vilken annan typ av variabel som helst, om den har ett värde så kommer den anses vara true. Det finns några specialregler här som t.ex. att siffran 0 är false och även en tom sträng är false.
 
@@ -171,7 +171,7 @@ if (antal) {
 }
 ```
 
-Du kan även kolla om en variabel stämmer överens med något. Detta görs med trippla likhetstecken (det går att använda dubbla likhetstecken, det är en mindre strikt kvarleva från den gamla tiden och bör undvikas). En enkelt likhetstecken skulle ändra värdet på det som exekveras i parentesen, det vill vi inte, vi vill bara kolla om det är sant.
+Du kan även kolla om en variabel stämmer överens med något. Detta görs med trippla likhetstecken (det går att använda dubbla likhetstecken, det är en mindre strikt kvarleva från den gamla tiden och bör undvikas). Ett enkelt likhetstecken skulle ändra värdet på det som exekveras i parentesen, det vill vi inte, vi vill bara kolla om det är sant.
 
 ```javascript
 let namn = 'Hugo';
@@ -222,7 +222,7 @@ Det finns en uppsjö av [operatorer](https://developer.mozilla.org/en-US/docs/We
 
 ## Funktioner
 
-När du skapat en funktion kan du kalla på den från andra ställen i koden. Funktioner kan ta emot en eller flera variabler, de kan utföra en uppgift och den kan `returnera` en variabel.
+När du skapat en funktion kan du kalla på den från andra ställen i koden. Funktioner kan ta emot en eller flera variabler, de kan utföra en uppgift och de kan `returnera` en variabel.
 
 #### Exempel utan returnering
 
@@ -289,27 +289,27 @@ for (let index = 0; index < 100; index++) {
 
 Exemplet ovan är en _klassik_ syntax för iteration som förekommer i en del andra programmeringsspråk också.
 
-Det finns många andra sätt att göra iterationer i javascript. Vissa metoder är lämnade för att ändra en lista till en annan form. Andra former är lämnade för att filtrera en lista till ett mindre antal.
+Det finns många andra sätt att göra iterationer i javascript. Vissa metoder är lämpade för att ändra en lista till en annan form. Andra former är lämnade för att filtrera en lista till ett mindre antal.
 
-#### Gå igenom alla värden i en array
+#### Exempel på att gå igenom alla värden i en array
 
 ```javascript
 const frukter = ['Äpple', 'Banan', 'Ananas'];
 frukter.forEach((frukt) => {
-  // kommer att kalla på funktionen add() med respektive frukt
-  add(frukt);
+  // kommer att kalla på funktionen eat() med respektive frukt
+  eat(frukt);
 });
 ```
 
-#### Filtrera en array
+#### Exempel på att filtrera en array
 
 ```javascript
-const frukter = ['Äpple', 'Banan', 'Ananas'];
-const urval = frukter.filter((frukt) => {
-  return frukt === 'Banan';
+const listaMedNummer = [42, 123, 64, 2, 70];
+const urval = listaMedNummer.filter((antal) => {
+  return antal > 50;
 });
 
-// urval kommer vara en array med enbart 1 inlägg: ['Banan]
+// urval kommer vara en array de siffror som var över 50: [123, 64, 70]
 ```
 
 ## Sammanfattning
