@@ -128,22 +128,22 @@ Det finns en rad olika typer av variabler. Nedan är inte en komplett lista öve
 
 ```javascript
 // Nummer (går att ändra med matematiska operatorer)
-const antal = 10;
+let antal = 10;
 
 // Sträng (all typ av text)
-const efternamn = 'Johansson';
+let efternamn = 'Johansson';
 
 // Objekt (fungerar som ett sätt att samla flera variabler under ett gemensamt namn)
-const user = { name: 'Kalle', surname: 'Johansson', age: 42 };
+let user = { name: 'Kalle', surname: 'Johansson', age: 42 };
 
 // Array (en lista av variabler, bra för att senare kunna stega igenom alla saker i listan)
-const frukter = ['Äpple', 'Banan', 'Ananas'];
+let frukter = ['Äpple', 'Banan', 'Ananas'];
 
 // Boolean (kan vara true eller false)
-const open = true;
+let open = true;
 
 // Ej satt värde (om satt manuellt så används null, variabel som aldrig haft ett värde är undefined)
-const value = null;
+let value = null;
 ```
 
 I javascript bestäms variabelns typ automatiskt när du skapar den. Det går sedan att ändra typ genom att bara ge den ett annat typ av värde.
