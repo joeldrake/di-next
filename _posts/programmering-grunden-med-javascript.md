@@ -288,7 +288,7 @@ for (let index = 0; index < 100; index++) {
 
 Exemplet ovan är en _klassik_ syntax för iteration som förekommer i en del andra programmeringsspråk också.
 
-Det finns många andra sätt att göra iterationer i javascript. Vissa metoder är lämpade för att ändra en lista till en annan form. Andra former är lämnade för att filtrera en lista till ett mindre antal.
+Det finns många andra sätt att göra iterationer i javascript. Vissa metoder är lämpade för att ändra en lista till en annan form. Andra former är lämpade för att filtrera en lista till ett mindre antal.
 
 #### Exempel på att gå igenom alla värden i en array
 
