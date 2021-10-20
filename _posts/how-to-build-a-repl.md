@@ -79,7 +79,7 @@ You can then post messages to the iframe and get it to render directly to its bo
 
 This is the basic concept you can have as a starting point.
 
-To get this usefull in your project you will most likely add more features and finess to it.
+To get this usefull in your project you will most likely add more features and finesse to it.
 
 ## Additional snippets
 
