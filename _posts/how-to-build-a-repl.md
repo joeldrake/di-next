@@ -134,7 +134,7 @@ const insertTab = (textarea) => {
 
 #### Debounce
 
-I suggest also adding a simple debounce to the function that updates the iframe content. Here is a simple implementation of debounce that can be used if you do not already have lodash in your project.
+I suggest also adding a debounce to the function that updates the iframe content. Here is a simple implementation of debounce that can be used if you do not already have lodash in your project.
 
 ```javascript
 const debounce = (fn, wait = 250) => {
@@ -159,8 +159,8 @@ Add some flexbox to it to get the windows nicely sized.
 
 #code {
   font-family: monospace;
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 16px;
+  padding: 16px;
 }
 
 #code,
@@ -172,7 +172,7 @@ Add some flexbox to it to get the windows nicely sized.
 
 ## Summary
 
-Use this blog post as a starting point for your own repl. Copy the code you like and refactor it after your needs.
+Use this blog post as a starting point for your own REPL. Copy the code you like and refactor it after your needs.
 
 A nice feature to add would be a button that takes what is written in the textarea and url-encode it. This can then be added to the url as a query string, and then be entered in the textarea on page load. This is great way to let users share code with just an url.
 
