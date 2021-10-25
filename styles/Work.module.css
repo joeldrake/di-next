@@ -39,6 +39,11 @@
   margin: 0;
 }
 
+.Work__time {
+  color: var(--color-text-subtle);
+  font-size: 0.9rem;
+}
+
 .Work__tags {
   margin-top: 1.5rem;
 }

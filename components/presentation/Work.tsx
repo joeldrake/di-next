@@ -15,6 +15,7 @@ const Work = () => {
         <div className={styles.Work__boxes + ' animateUnderline'}>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
             <h3>RetailOnly</h3>
+            <div className={styles.Work__time}>2019 - ongoing</div>
             <p>Part of a team building a web app for a big retail company in Sweden.</p>
             <p>
               Working tightly together with business analysts and UI/UX experts to construct the
@@ -34,7 +35,8 @@ const Work = () => {
           </div>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
             <h3>Infoping</h3>
-            <p>Tech startup created with ett.se in 2015.</p>
+            <div className={styles.Work__time}>2015 - 2019</div>
+            <p>Tech startup created with ett.se.</p>
             <p>
               I designed and built the front-end of the platform, which included a public website,
               an admin dashboard and a PWA.
@@ -52,6 +54,7 @@ const Work = () => {
           </div>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
             <h3>ett.se</h3>
+            <div className={styles.Work__time}>2011 - 2019</div>
             <p>
               We were a team of five people that worked together between 2008 and 2019, with
               collaboration solutions and digital communication. In 2011 we launched ett.se and
@@ -70,6 +73,7 @@ const Work = () => {
           </div>
           <div className={styles.Work__box + ' invisibleSideScrolling'}>
             <h3>OpenText</h3>
+            <div className={styles.Work__time}>2008 - 2011</div>
             <p>
               Technical Support for the email and collaboration system FirstClass, in Sweden and
               Scandinavia.
