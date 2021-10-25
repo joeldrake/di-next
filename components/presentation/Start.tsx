@@ -37,7 +37,7 @@ const Start = () => {
         )}
       >
         <a href="#about" className={styles.Start__continueLink} onClick={onClick}>
-          <h1 className={styles.Start__headline}>Front End Web Dev</h1>
+          <h1 className={styles.Start__headline}>Front-end web dev</h1>
           <img src="/images/downarrow.svg" alt="About" className={styles.Start__downArrow} />
         </a>
       </div>

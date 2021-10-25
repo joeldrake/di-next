@@ -36,7 +36,7 @@ const Work = () => {
             <h3>Infoping</h3>
             <p>Tech startup created with ett.se in 2015.</p>
             <p>
-              I designed and built the front end of the platform, which included a public website,
+              I designed and built the front-end of the platform, which included a public website,
               an admin dashboard and a PWA.
             </p>
             <p>
