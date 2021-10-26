@@ -66,3 +66,13 @@
   height: 100%;
   width: auto;
 }
+
+@media print {
+  .Contact {
+    color: #222;
+    --color-text-primary: #222;
+    --color-interactive-primary: #222;
+    --color-background-primary: transparent;
+    min-height: 0;
+  }
+}

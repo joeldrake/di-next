@@ -58,3 +58,12 @@
     margin-bottom: 2rem;
   }
 }
+
+@media print {
+  .Work {
+    --color-background-primary: transparent;
+  }
+  .Work__box {
+    border: 1px solid var(--color-grey);
+  }
+}
