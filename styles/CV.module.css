@@ -1,0 +1,133 @@
+.CV {
+  padding: 3rem 2rem;
+
+  max-width: 768px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    [col-left] minmax(100px, auto) [col-center] 1fr [col-right] minmax(100px, auto)
+    [col-end];
+  gap: 1.5em;
+  line-height: 1.2;
+}
+
+.CV p {
+  padding: 0;
+  margin: 0;
+}
+
+.CV__title,
+.CV__title_under {
+  font-family: Times, 'Times New Roman', Serif;
+}
+
+.CV__title {
+  margin-top: -0.1em;
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 6.9em;
+  letter-spacing: -2px;
+}
+
+.CV__image {
+  width: 20vw;
+  max-width: 100px;
+  min-width: 100px;
+  height: auto;
+  grid-column-start: col-right;
+  grid-column-end: col-end;
+
+  grid-row-start: 0;
+  grid-row-end: 1;
+}
+
+.CV__address_under {
+  white-space: nowrap;
+}
+
+.CV__title_under {
+  margin: 0;
+  font-size: 2em;
+  grid-column-start: col-left;
+  grid-column-end: col-end;
+  border-bottom: 2px solid var(--color-text-primary);
+}
+
+p.CV__footer {
+  grid-column-start: col-left;
+  grid-column-end: col-end;
+  margin-top: 2em;
+}
+
+.CV__item_time {
+  grid-column-start: col-left;
+  grid-column-end: col-center;
+}
+
+.CV__item_text {
+  grid-column-start: col-center;
+  grid-column-end: col-right;
+}
+
+@media screen and (max-width: 768px) {
+  .CV {
+    gap: 1em;
+  }
+  .CV__title {
+    grid-column-start: col-left;
+    grid-column-end: col-end;
+    text-align: center;
+  }
+
+  .CV__info {
+    grid-column-start: col-left;
+    grid-column-end: col-end;
+    text-align: center;
+  }
+
+  .CV__image {
+    grid-column-start: col-left;
+    grid-column-end: col-end;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0 auto;
+  }
+
+  .CV__item_text {
+    grid-column-end: col-end;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .CV {
+    padding: 2rem 1rem;
+  }
+
+  .CV__item_time {
+    grid-column-start: col-left;
+    grid-column-end: col-end;
+  }
+
+  p.CV__item_text {
+    grid-column-start: col-left;
+    margin-bottom: 2em;
+  }
+}
+
+@media print {
+  .CV {
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .CV__image {
+    max-width: 250px;
+  }
+
+  @page {
+    size: auto;
+    margin: 16px;
+  }
+}
