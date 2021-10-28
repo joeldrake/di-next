@@ -1,16 +1,24 @@
 import styles from '@/styles/About.module.css';
 
-const About = () => {
+type Props = {
+  hideHeader?: boolean;
+};
+
+const About = ({ hideHeader }: Props) => {
   return (
     <div className={styles.About} id="about">
       <div className="siteWidth sectionPadding siteSidePadding invisibleSideScrolling">
-        <h2>
-          About{' '}
-          <span role="img" aria-label="Dragon">
-            🐲
-          </span>
-        </h2>
-        <hr />
+        {hideHeader ? null : (
+          <>
+            <h2>
+              About{' '}
+              <span role="img" aria-label="Dragon">
+                🐲
+              </span>
+            </h2>
+            <hr />
+          </>
+        )}
 
         <p>
           Greetings,

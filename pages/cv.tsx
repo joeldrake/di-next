@@ -1,6 +1,6 @@
 import styles from '@/styles/CV.module.css';
 
-const Repl = () => {
+const CV = () => {
   return (
     <div className={styles.CV}>
       <h1 className={styles.CV__title}>CV</h1>
@@ -102,4 +102,4 @@ const Repl = () => {
   );
 };
 
-export default Repl;
+export default CV;
