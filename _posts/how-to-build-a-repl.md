@@ -25,7 +25,7 @@ It's a great way to set up a sandbox for your component library (or whatever) wh
 
 ## Lets build it
 
-The concept is to have an iframe that you initiate with a srcdoc that has an addEventListener for messages, and a function that takes the content of these messages and puts in in the body of the iframe.
+The concept is to have an iframe that you initiate with a srcdoc that has an eventListener for messages, and a function that takes the content of these messages and puts it in the body of the iframe.
 
 You can then post messages to the iframe and get it to render directly to its body.
 
